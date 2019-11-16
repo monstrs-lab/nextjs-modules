@@ -1,15 +1,13 @@
 on:
   schedule:
-    - cron: '0 1 * * *'
-
+    - cron: 0 1 * * *
 jobs:
   run:
     runs-on: ubuntu-latest
-
     steps:
       - uses: docker://renovate/renovate:19.66
         env:
           RENOVATE_PLATFORM: github
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
         with:
-          args: --onboarding=true ${{ GITHUB_REPOSITORY }}
+          args: --onboarding=true ${GITHUB_REPOSITORY}
