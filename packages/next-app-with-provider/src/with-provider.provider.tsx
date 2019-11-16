@@ -3,9 +3,13 @@ import React, { Component } from 'react'
 
 type Props = {}
 
-export const withProvider = () => WrapperComponent =>
+export const withProvider = (Provider, defaults = {}) => WrapperComponent =>
   class WithProvider extends Component<Props> {
     render() {
-      return <WrapperComponent {...this.props} />
+      return (
+        <Provider {...defaults} {...this.props}>
+          <WrapperComponent {...defaults} {...this.props} />
+        </Provider>
+      )
     }
   }
