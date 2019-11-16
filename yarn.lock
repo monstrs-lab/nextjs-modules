@@ -2380,10 +2380,10 @@
   resolved "https://registry.yarnpkg.com/@monstrs/react-user/-/react-user-0.1.0.tgz#dd9c1e390f0c40f826c462e5b2b657438bf4bfb9"
   integrity sha512-DlIV1YEH7j6mEEKmjKamYvQDCFbigumHpCr2idhz5GWe48LieawpXRw5s8hr6xnC4IbeUua97DA1UdyWUmtbpQ==
 
-"@monstrs/schematics-next@0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@monstrs/schematics-next/-/schematics-next-0.1.11.tgz#1a902e50508cc1e67f6d5dd7694fe389803d8ddf"
-  integrity sha512-tkFUHq4Es1Eq5nfl+ttaebbLB1R5jBWk2PrUGxj7+sXCt43LyspbiDSjoFIvdf0G2Q96byXf3Zwsx16OjEdoZQ==
+"@monstrs/schematics-next@0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@monstrs/schematics-next/-/schematics-next-0.1.12.tgz#0c6e90bd277e8c855a523b65b6b9754d0e3a705b"
+  integrity sha512-aDBs6I1LQRcX6H20PAKbuQhemc2BMku6Lt9FmWhC7mR+ruzP/N74tfbr6FkamlPYrayRBoonFEs+aJIq9pgleQ==
   dependencies:
     "@angular-devkit/core" "8.3.19"
     "@angular-devkit/schematics" "8.3.19"
