@@ -1,5 +1,5 @@
 {
-  "name": "@monstrs/document-with-emotion",
+  "name": "@monstrs/next-app-with-provider",
   "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -15,16 +15,14 @@
     "build": "tsc -p tsconfig.json"
   },
   "devDependencies": {
-    "@types/node": "^12.12.7",
+    "@types/node": "12.12.8",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
-    "emotion-server": "^10.0.17",
     "next": "^9.1.2",
     "react": "^16.12.0",
     "typescript": "^3.7.2"
   },
   "peerDependencies": {
-    "emotion-server": "^10.0.17",
     "next": "^9.1.2",
     "react": "^16.12.0"
   }

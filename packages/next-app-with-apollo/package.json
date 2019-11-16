@@ -1,5 +1,5 @@
 {
-  "name": "@monstrs/document-with-helmet",
+  "name": "@monstrs/next-app-with-apollo",
   "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -14,18 +14,32 @@
     "prebuild": "yarn clean",
     "build": "tsc -p tsconfig.json"
   },
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link": "^1.2.13",
+    "apollo-link-error": "^1.1.12",
+    "apollo-link-http": "^1.5.16",
+    "isomorphic-unfetch": "^3.0.0"
+  },
   "devDependencies": {
-    "@types/node": "^12.12.7",
+    "@types/graphql": "14.5.0",
+    "@types/node": "12.12.8",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
+    "apollo-link-http-common": "0.2.15",
     "next": "^9.1.2",
     "react": "^16.12.0",
-    "react-helmet": "^5.2.1",
+    "react-apollo": "3.1.3",
+    "react-dom": "^16.12.0",
     "typescript": "^3.7.2"
   },
   "peerDependencies": {
+    "@apollo/react-common": "^3.1.0",
+    "@apollo/react-ssr": "^3.1.0",
+    "graphql": "^14.5.0",
     "next": "^9.1.2",
     "react": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-dom": "^16.9.0"
   }
 }

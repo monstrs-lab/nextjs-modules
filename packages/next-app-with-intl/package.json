@@ -1,5 +1,5 @@
 {
-  "name": "@monstrs/app-with-user",
+  "name": "@monstrs/next-app-with-intl",
   "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -15,17 +15,21 @@
     "build": "tsc -p tsconfig.json"
   },
   "devDependencies": {
-    "@monstrs/react-user": "^0.1.0",
+    "@monstrs/react-locale": "^0.1.0",
     "@types/node": "12.12.8",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "next": "^9.1.2",
     "react": "^16.12.0",
-    "typescript": "^3.7.2"
+    "react-intl": "^3.1.6",
+    "typescript": "^3.7.2",
+    "universal-cookie": "^4.0.0"
   },
   "peerDependencies": {
-    "@monstrs/react-user": "^0.1.0",
+    "@monstrs/react-locale": "^0.1.0",
     "next": "^9.1.2",
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "react-intl": "^3.1.6",
+    "universal-cookie": "^4.0.0"
   }
 }

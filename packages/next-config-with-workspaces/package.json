@@ -1,5 +1,5 @@
 {
-  "name": "@monstrs/app-with-helmet",
+  "name": "@monstrs/next-config-with-workspaces",
   "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -14,18 +14,12 @@
     "prebuild": "yarn clean",
     "build": "tsc -p tsconfig.json"
   },
-  "devDependencies": {
-    "@types/node": "12.12.8",
-    "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.4",
-    "next": "^9.1.2",
-    "react": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "typescript": "^3.7.2"
+  "dependencies": {
+    "@lerna/project": "^3.16.0",
+    "globby": "^10.0.1"
   },
-  "peerDependencies": {
-    "next": "^9.1.2",
-    "react": "^16.12.0",
-    "react-helmet": "^5.2.1"
+  "devDependencies": {
+    "@types/node": "^12.12.7",
+    "typescript": "^3.7.2"
   }
 }
