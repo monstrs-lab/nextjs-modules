@@ -15,19 +15,19 @@
     "build": "tsc -p tsconfig.json"
   },
   "devDependencies": {
-    "next": "^9.1.2",
-    "react": "^16.12.0",
+    "@types/node": "12.12.8",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
-    "@types/node": "^12.12.7",
-    "typescript": "^3.7.2",
     "emotion": "^10.0.17",
-    "emotion-theming": "^10.0.19"
-  },
-  "peerDependencies": {
+    "emotion-theming": "^10.0.19",
     "next": "^9.1.2",
     "react": "^16.12.0",
+    "typescript": "^3.7.2"
+  },
+  "peerDependencies": {
     "emotion": "^10.0.17",
-    "emotion-theming": "^10.0.19"
+    "emotion-theming": "^10.0.19",
+    "next": "^9.1.2",
+    "react": "^16.12.0"
   }
 }

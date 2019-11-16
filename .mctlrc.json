@@ -1,5 +1,5 @@
 {
   "collection": "@monstrs/schematics-next",
   "schematic": "workspace",
-  "migration": "1573819319832"
+  "migration": 1573888029727
 }
