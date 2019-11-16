@@ -1,0 +1,25 @@
+{
+  "name": "@monstrs/config-with-workspaces",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "prebuild": "yarn clean",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@lerna/project": "^3.16.0",
+    "globby": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.7",
+    "typescript": "^3.7.2"
+  }
+}
