@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-provider@0.3.0...@monstrs/next-app-with-provider@0.3.1) (2019-11-16)
+
+### Bug Fixes
+
+- **common:** provider ([3136d11](https://github.com/monstrs-lab/nextjs-modules/commit/3136d11bbe35c96060a8725550a09b675d497013))
+
 # 0.3.0 (2019-11-16)
 
 ### Features
