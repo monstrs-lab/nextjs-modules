@@ -5,7 +5,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://renovate/renovate:19.66
+      - uses: docker://renovate/renovate:19.70
         env:
           RENOVATE_PLATFORM: github
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
