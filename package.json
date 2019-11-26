@@ -13,7 +13,7 @@
     "@monstrs/mctl": "0.1.75",
     "@monstrs/schematics-next": "0.1.12",
     "husky": "3.0.9",
-    "lerna": "3.18.4",
+    "lerna": "3.19.0",
     "typescript": "3.7.2"
   },
   "workspaces": [
