@@ -1,13 +1,16 @@
+name: Deps
+
 on:
   schedule:
     - cron: 0 1 * * *
+
 jobs:
-  run:
+  renovate:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://renovate/renovate:19.70
-        env:
-          RENOVATE_PLATFORM: github
-          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
-          RENOVATE_REPOSITORIES: ${{ github.repository }}
-          RENOVATE_ONBOARDING: true
+    - run: docker run -e RENOVATE_PLATFORM -e RENOVATE_TOKEN renovate/renovate:${IMAGE_TAG} ${RENOVATE_REPOSITORIES}
+      env:
+        IMAGE_TAG: 19.70
+        RENOVATE_PLATFORM: github
+        RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+        RENOVATE_REPOSITORIES: ${{ github.repository }}
