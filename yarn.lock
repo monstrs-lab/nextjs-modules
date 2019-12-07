@@ -2380,15 +2380,15 @@
   resolved "https://registry.yarnpkg.com/@monstrs/react-user/-/react-user-0.1.0.tgz#dd9c1e390f0c40f826c462e5b2b657438bf4bfb9"
   integrity sha512-DlIV1YEH7j6mEEKmjKamYvQDCFbigumHpCr2idhz5GWe48LieawpXRw5s8hr6xnC4IbeUua97DA1UdyWUmtbpQ==
 
-"@monstrs/schematics-next@0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@monstrs/schematics-next/-/schematics-next-0.1.18.tgz#aee270d9ea21ba95e80f79b55cffbcce74285116"
-  integrity sha512-CBYC+KODukoSXyMpeXr+L1kD223SaNJBKfS1QINrwu0Pq5RgN9JyhzJnsMr8dg8BX0tSiBJiesl3gtLjd77nCw==
+"@monstrs/schematics-next@0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@monstrs/schematics-next/-/schematics-next-0.1.20.tgz#183c486c05ea620ffb45d31e944d5cdde9a36d48"
+  integrity sha512-8GZrxv9uiHNGa0KZBvco6uaBt9mQ3wMKfhy9n1Z4UII43Cj6R781wY+BBAh8suCAZU2RNThmLN3l+wTL8s6q7w==
   dependencies:
     "@angular-devkit/core" "8.3.19"
     "@angular-devkit/schematics" "8.3.19"
     "@monstrs/schematics-utils" "0.1.7"
-    "@monstrs/schematics-workspace" "0.1.41"
+    "@monstrs/schematics-workspace" "0.1.43"
     semver "6.3.0"
 
 "@monstrs/schematics-utils@0.1.7":
@@ -2402,10 +2402,10 @@
     strip-json-comments "3.0.1"
     yaml "1.7.2"
 
-"@monstrs/schematics-workspace@0.1.41":
-  version "0.1.41"
-  resolved "https://registry.yarnpkg.com/@monstrs/schematics-workspace/-/schematics-workspace-0.1.41.tgz#93f56a7602ed5dcaa27bc1366555ab566b16eee9"
-  integrity sha512-R8W8Nsx4+qmGh4D9rpb1Ho0STahasCf7PfgvA0XSknlRbcMCNPWBYmCinNXhgdFDCMaavFJE8Njo7gLudpcCdg==
+"@monstrs/schematics-workspace@0.1.43":
+  version "0.1.43"
+  resolved "https://registry.yarnpkg.com/@monstrs/schematics-workspace/-/schematics-workspace-0.1.43.tgz#f62df7966f5fdd01344b289b70d612a3b55d550d"
+  integrity sha512-wn21zMT9mWlTbqtAD16rIvMEXSVzUlRRfej62G8TUtScF8Rzbmg8gM9aHPl3gDZ/uZk/N3qDNZNMb7eyDLXPCg==
   dependencies:
     "@angular-devkit/core" "8.3.19"
     "@angular-devkit/schematics" "8.3.19"
