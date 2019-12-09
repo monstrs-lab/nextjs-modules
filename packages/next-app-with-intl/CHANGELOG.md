@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-intl@0.3.1...@monstrs/next-app-with-intl@0.3.2) (2019-12-09)
+
+### Features
+
+- **common:** intl check request ([e5e065f](https://github.com/monstrs-lab/nextjs-modules/commit/e5e065f2ecfef462715dcb2e11381cdaf3955a6b))
+
 ## [0.3.1](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-intl@0.3.0...@monstrs/next-app-with-intl@0.3.1) (2019-12-04)
 
 **Note:** Version bump only for package @monstrs/next-app-with-intl

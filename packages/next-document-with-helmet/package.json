@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/next-document-with-helmet",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT",
   "main": "dist/index.js",
   "source": "src/index.ts",
