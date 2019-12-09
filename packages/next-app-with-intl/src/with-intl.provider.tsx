@@ -50,6 +50,14 @@ export const withIntl = ({
       if (!(process as any).browser) {
         let locale = defaultLocale
 
+        if (!req.acceptsLanguages) {
+          return {
+            ...props,
+            locale: defaultLocale,
+            messages: {},
+          }
+        }
+
         const acceptLang = req.acceptsLanguages(defaultLocale, ...supportedLocales)
 
         if (supportedLocales.includes(acceptLang)) {
