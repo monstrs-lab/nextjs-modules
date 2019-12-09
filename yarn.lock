@@ -2202,10 +2202,10 @@
     cosmiconfig "6.0.0"
     tslib "^1"
 
-"@monstrs/mctl-format@0.1.30":
-  version "0.1.30"
-  resolved "https://registry.yarnpkg.com/@monstrs/mctl-format/-/mctl-format-0.1.30.tgz#1e98ca30c2671aa24328e4818bdcd1c522ad7483"
-  integrity sha512-V3Vc5ebwsLPyiale0t46bt0SIMDjbt6XAVtzbcnUFY3KghFTmLwckZwNDHlySyKZG73P3piCzo5eHJbJSmbYoA==
+"@monstrs/mctl-format@0.1.31":
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/@monstrs/mctl-format/-/mctl-format-0.1.31.tgz#b998b1a76c9036bd5d690c35d517f456e65b8ad3"
+  integrity sha512-VirxZ8wbqr8MadWfj8tJEzJPbrbTFPf/ZbhDhx4Zg/6ffuhazM8YdH+KBEebmG3XVcPFzkeUc5isDcbWDNYMgQ==
   dependencies:
     "@monstrs/config" "0.2.1"
     "@oclif/command" "^1"
@@ -2230,10 +2230,10 @@
     enquirer "2.3.2"
     tslib "^1"
 
-"@monstrs/mctl-legacy@0.1.27":
-  version "0.1.27"
-  resolved "https://registry.yarnpkg.com/@monstrs/mctl-legacy/-/mctl-legacy-0.1.27.tgz#6737e52ddd20c259327ac412ac3d5825964f3d3c"
-  integrity sha512-qpZ59g8YP0rJi8p4MljFk6fJrRXNRPSzbvXAw/1GzwF4oCpKdjHdSl5T/jGzXW/jSzAnnejV5vQb/Uf8yi01Xw==
+"@monstrs/mctl-legacy@0.1.28":
+  version "0.1.28"
+  resolved "https://registry.yarnpkg.com/@monstrs/mctl-legacy/-/mctl-legacy-0.1.28.tgz#bd5c4a705dc6b75b3424e585875a32ddd0345571"
+  integrity sha512-j3RoFKgCU2uvy7M0Fgg/tjxOGtggaT9hzOepg5F4s7VsnSzdQIVeS/ENnGpaOk21NSCS0JbAPtmtTjJauutu/A==
   dependencies:
     "@actions/core" "1.2.0"
     "@actions/github" "1.1.0"
@@ -2324,19 +2324,19 @@
     execa "3.4.0"
     tslib "^1"
 
-"@monstrs/mctl@0.1.78":
-  version "0.1.78"
-  resolved "https://registry.yarnpkg.com/@monstrs/mctl/-/mctl-0.1.78.tgz#c51ad1002d7cf9eaf622d8c884dc888a232f4095"
-  integrity sha512-ZFAuzCIXT6D9LTQNmmH4S0tR9BX1PhOBewQ13cLiJjlwTe2RTA7BzgsNdDzQ+1+lIJFvtFd5W9Gm+Hdjxvi2iA==
+"@monstrs/mctl@0.1.80":
+  version "0.1.80"
+  resolved "https://registry.yarnpkg.com/@monstrs/mctl/-/mctl-0.1.80.tgz#08ac9ed88990ba335348d568ffec69f8bb7c9d1e"
+  integrity sha512-KvcaFsdUyBqaG5VdylWA/1LFIqzT4cqoCJZAnBesrJOe8Mah+p/muhepA/JJcxSmB86MbBMT5fP5Mnng6FBrGQ==
   dependencies:
     "@monstrs/mctl-build" "0.1.21"
     "@monstrs/mctl-check" "0.1.35"
     "@monstrs/mctl-commit" "0.1.17"
     "@monstrs/mctl-commitmsg" "0.1.40"
     "@monstrs/mctl-config" "0.1.17"
-    "@monstrs/mctl-format" "0.1.30"
+    "@monstrs/mctl-format" "0.1.31"
     "@monstrs/mctl-generate" "0.1.22"
-    "@monstrs/mctl-legacy" "0.1.27"
+    "@monstrs/mctl-legacy" "0.1.28"
     "@monstrs/mctl-lint" "0.1.28"
     "@monstrs/mctl-migration" "0.1.19"
     "@monstrs/mctl-precommit" "0.1.46"
