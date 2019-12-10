@@ -10,7 +10,7 @@
     "checkcommit": "mctl precommit"
   },
   "devDependencies": {
-    "@monstrs/mctl": "0.1.80",
+    "@monstrs/mctl": "0.1.81",
     "@monstrs/schematics-next": "0.1.20",
     "husky": "3.1.0",
     "lerna": "3.19.0",
