@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.3...@monstrs/next-app-with-apollo@0.3.4) (2019-12-14)
+
+**Note:** Version bump only for package @monstrs/next-app-with-apollo
+
 ## [0.3.3](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.2...@monstrs/next-app-with-apollo@0.3.3) (2019-12-14)
 
 ### Features
