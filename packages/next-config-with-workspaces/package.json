@@ -19,7 +19,7 @@
     "globby": "^10.0.1"
   },
   "devDependencies": {
-    "@types/node": "12.12.14",
+    "@types/node": "12.12.17",
     "typescript": "3.7.3"
   }
 }
