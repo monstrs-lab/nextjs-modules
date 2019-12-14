@@ -1,5 +1,5 @@
 {
   "collection": "@monstrs/schematics-next",
   "schematic": "document-provider",
-  "migration": "1573916234488"
+  "migration": 1576339486348
 }
