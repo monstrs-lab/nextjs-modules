@@ -22,7 +22,7 @@
     "emotion-server": "10.0.17",
     "next": "9.1.6",
     "react": "16.12.0",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   },
   "peerDependencies": {
     "emotion-server": "^10.0.17",
