@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@lerna/project": "^3.16.0",
-    "globby": "^10.0.1"
+    "globby": "^11.0.0"
   },
   "devDependencies": {
     "@monstrs/publish-flow": "0.1.3",
