@@ -22,7 +22,7 @@
     "@types/react-dom": "16.9.4",
     "next": "9.2.0",
     "react": "16.12.0",
-    "typescript": "3.7.4"
+    "typescript": "3.7.5"
   },
   "peerDependencies": {
     "@monstrs/react-auth": "^0.1.0",
