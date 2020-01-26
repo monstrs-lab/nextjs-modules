@@ -10,6 +10,7 @@ interface Options {
   uri: string
   fetch?: any
   resetStoreKeys?: string[]
+  wrapApp?: boolean
 }
 
 type Props = {
@@ -19,6 +20,7 @@ type Props = {
 export const withApollo = ({
   uri,
   fetch,
+  wrapApp,
   resetStoreKeys = ['locale'],
 }: Options) => WrapperComponent => {
   class ClientContainer extends React.Component<Props> {
@@ -72,6 +74,7 @@ export const withApollo = ({
     static async getInitialProps(ctx) {
       const {
         Component,
+        AppTree,
         router,
         ctx: { res },
       } = ctx
@@ -106,7 +109,9 @@ export const withApollo = ({
 
       if (!(process as any).browser) {
         try {
-          const tree = (
+          const tree = wrapApp ? (
+            <AppTree {...props} />
+          ) : (
             <WrapperComponent
               {...props}
               router={router}
