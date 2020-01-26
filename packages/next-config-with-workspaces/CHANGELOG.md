@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-config-with-workspaces@0.3.4...@monstrs/next-config-with-workspaces@0.3.5) (2020-01-26)
+
+### Bug Fixes
+
+- **deps:** update dependency globby to v11 ([a6db81f](https://github.com/monstrs-lab/nextjs-modules/commit/a6db81f857493ec43312d8bde6bded2759994c3f))
+
 ## [0.3.4](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-config-with-workspaces@0.3.3...@monstrs/next-config-with-workspaces@0.3.4) (2019-12-14)
 
 **Note:** Version bump only for package @monstrs/next-config-with-workspaces
