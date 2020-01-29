@@ -1,3 +1,4 @@
+import Document                         from 'next/document'
 import React                            from 'react'
 import Helmet                           from 'react-helmet'
 import { Head, Html, Main, NextScript } from 'next/document'
@@ -5,7 +6,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 export const withHelmet = () => TargetComponent =>
   class WithHelmet extends TargetComponent {
     static async getInitialProps(context) {
-      const props = await super.getInitialProps(context)
+      const props = await TargetComponent.getInitialProps(context)
 
       const helmet = Helmet.renderStatic()
       const helmetHead = Object.keys(helmet)
@@ -16,6 +17,11 @@ export const withHelmet = () => TargetComponent =>
       props.head = [...props.head, ...helmetHead]
 
       return { ...props, helmet }
+    }
+
+    static renderDocument(...args) {
+      // @ts-ignore
+      return Document.renderDocument(...args)
     }
 
     get helmetHtmlAttrComponents() {

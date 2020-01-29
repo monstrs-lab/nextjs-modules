@@ -1,3 +1,4 @@
+import Document            from 'next/document'
 import React               from 'react'
 import { extractCritical } from 'emotion-server'
 
@@ -11,6 +12,11 @@ export const withEmotion = () => TargetComponent =>
       props.styles.push(<style key='emotion' dangerouslySetInnerHTML={{ __html: css }} />)
 
       return { ...props, ids }
+    }
+
+    static renderDocument(...args) {
+      // @ts-ignore
+      return Document.renderDocument(...args)
     }
 
     constructor(props) {
