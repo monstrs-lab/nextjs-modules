@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-emotion@0.3.5...@monstrs/next-app-with-emotion@0.3.6) (2020-01-29)
+
+**Note:** Version bump only for package @monstrs/next-app-with-emotion
+
 ## [0.3.5](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-emotion@0.3.4...@monstrs/next-app-with-emotion@0.3.5) (2020-01-26)
 
 **Note:** Version bump only for package @monstrs/next-app-with-emotion

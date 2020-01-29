@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-document-with-emotion@0.3.5...@monstrs/next-document-with-emotion@0.3.6) (2020-01-29)
+
+### Bug Fixes
+
+- **common:** build source helmet provider ([4edc104](https://github.com/monstrs-lab/nextjs-modules/commit/4edc1040ca8f2016f0816b9690c5489faeee1faf))
+
 ## [0.3.5](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-document-with-emotion@0.3.4...@monstrs/next-document-with-emotion@0.3.5) (2020-01-26)
 
 **Note:** Version bump only for package @monstrs/next-document-with-emotion
