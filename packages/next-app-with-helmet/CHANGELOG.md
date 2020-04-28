@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-helmet@0.3.6...@monstrs/next-app-with-helmet@0.3.7) (2020-04-28)
+
+### Features
+
+- **common:** react-helmet named import ([2cb77fd](https://github.com/monstrs-lab/nextjs-modules/commit/2cb77fd0301038818f89386a1d034528b1288483))
+
 ## [0.3.6](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-helmet@0.3.5...@monstrs/next-app-with-helmet@0.3.6) (2020-01-29)
 
 **Note:** Version bump only for package @monstrs/next-app-with-helmet
