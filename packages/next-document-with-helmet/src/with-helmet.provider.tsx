@@ -1,7 +1,7 @@
 import Document                         from 'next/document'
 import React                            from 'react'
-import Helmet                           from 'react-helmet'
 import { Head, Html, Main, NextScript } from 'next/document'
+import { Helmet }                       from 'react-helmet'
 
 export const withHelmet = () => TargetComponent =>
   class WithHelmet extends TargetComponent {
