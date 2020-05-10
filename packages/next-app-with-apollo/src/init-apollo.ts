@@ -1,9 +1,11 @@
-import ApolloClient       from 'apollo-client'
-import fetch              from 'isomorphic-unfetch'
-import { InMemoryCache }  from 'apollo-cache-inmemory'
-import { ApolloLink }     from 'apollo-link'
-import { onError }        from 'apollo-link-error'
-import { createHttpLink } from 'apollo-link-http'
+import ApolloClient          from 'apollo-client'
+import fetch                 from 'isomorphic-unfetch'
+import { InMemoryCache }     from 'apollo-cache-inmemory'
+import { ApolloLink }        from 'apollo-link'
+import { onError }           from 'apollo-link-error'
+import { createHttpLink }    from 'apollo-link-http'
+
+import { networkStatusLink } from './network-status'
 
 interface Fetch {
   (uri, options: any, props: any): Promise<any>
@@ -53,7 +55,7 @@ function create(initialState = {}, options: Options, getProps) {
     connectToDevTools: (process as any).browser,
     ssrMode: !(process as any).browser,
     cache: new InMemoryCache().restore(initialState),
-    link: ApolloLink.from([errorLink, httpLink]),
+    link: ApolloLink.from([errorLink, networkStatusLink.concat(httpLink)]),
   })
 }
 

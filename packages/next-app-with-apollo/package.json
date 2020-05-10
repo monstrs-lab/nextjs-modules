@@ -20,7 +20,8 @@
     "apollo-link": "^1.2.13",
     "apollo-link-error": "^1.1.12",
     "apollo-link-http": "^1.5.16",
-    "isomorphic-unfetch": "^3.0.0"
+    "isomorphic-unfetch": "^3.0.0",
+    "react-apollo-network-status": "^4.0.0"
   },
   "devDependencies": {
     "@monstrs/publish-flow": "0.1.3",
