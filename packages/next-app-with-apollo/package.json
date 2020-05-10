@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/next-app-with-apollo",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [

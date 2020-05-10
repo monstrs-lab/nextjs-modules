@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.9](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-provider@0.3.8...@monstrs/next-app-with-provider@0.3.9) (2020-05-10)
+
+**Note:** Version bump only for package @monstrs/next-app-with-provider
+
+
+
+
+
 ## [0.3.8](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-provider@0.3.7...@monstrs/next-app-with-provider@0.3.8) (2020-04-28)
 
 **Note:** Version bump only for package @monstrs/next-app-with-provider
