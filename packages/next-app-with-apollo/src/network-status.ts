@@ -1,4 +1,4 @@
-import { createNetworkStatusNotifier } from 'react-apollo-network-status'
+import { createNetworkStatusNotifier } from './network-status-fork'
 
 const notifier = createNetworkStatusNotifier()
 

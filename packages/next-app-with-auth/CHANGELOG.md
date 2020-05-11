@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.9](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-auth@0.3.8...@monstrs/next-app-with-auth@0.3.9) (2020-05-11)
 
-
 ### Features
 
-* **common:** emotion cache ([2045b7e](https://github.com/monstrs-lab/nextjs-modules/commit/2045b7e394dbcdc00d515186dc101f100cbb46f1))
-
-
-
-
+- **common:** emotion cache ([2045b7e](https://github.com/monstrs-lab/nextjs-modules/commit/2045b7e394dbcdc00d515186dc101f100cbb46f1))
 
 ## [0.3.8](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-auth@0.3.7...@monstrs/next-app-with-auth@0.3.8) (2020-05-10)
 
