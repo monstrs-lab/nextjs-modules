@@ -5,27 +5,25 @@ import { ApolloProvider }   from '@apollo/client'
 
 import { initApolloClient } from './apollo.client'
 import { initOnContext }    from './apollo.context'
+import { extractHeaders }   from './headers'
 
 interface Options {
   uri: string
-  fetch?: any
+  headers?: any
   resetStoreKeys?: string[]
 }
 
-export const withApollo = ({ uri, fetch, resetStoreKeys = [] }: Options) => PageComponent => {
-  const WithApollo = ({ apolloClient, apolloState, ...pageProps }) => {
+export const withApollo = ({
+  uri,
+  headers = [],
+  resetStoreKeys = [],
+}: Options) => PageComponent => {
+  const WithApollo = ({ apolloClient, apolloState, apolloOptions, ...pageProps }) => {
     let client
     if (apolloClient) {
       client = apolloClient
     } else {
-      client = initApolloClient(
-        apolloState,
-        {
-          uri,
-          fetch,
-        },
-        () => pageProps
-      )
+      client = initApolloClient(apolloState, apolloOptions)
     }
 
     return (
@@ -43,17 +41,14 @@ export const withApollo = ({ uri, fetch, resetStoreKeys = [] }: Options) => Page
   WithApollo.getInitialProps = async ctx => {
     const inAppContext = Boolean(ctx.ctx)
 
+    const apolloOptions = {
+      uri,
+      headers: extractHeaders(ctx, headers),
+    }
+
     let pageProps = {}
 
-    const { apolloClient } = initOnContext(
-      ctx,
-      {
-        uri,
-        fetch,
-        onUnauthenticated: () => ({}),
-      },
-      () => pageProps
-    )
+    const { apolloClient } = initOnContext(ctx, apolloOptions)
 
     if (PageComponent.getInitialProps) {
       pageProps = await PageComponent.getInitialProps(ctx)
@@ -91,6 +86,7 @@ export const withApollo = ({ uri, fetch, resetStoreKeys = [] }: Options) => Page
 
     return {
       ...pageProps,
+      apolloOptions,
       apolloState: apolloClient.cache.extract(),
       apolloClient: ctx.apolloClient,
     }

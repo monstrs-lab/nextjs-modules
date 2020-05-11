@@ -1,6 +1,6 @@
 import { initApolloClient } from './apollo.client'
 
-export const initOnContext = (ctx, options, getProps) => {
+export const initOnContext = (ctx, options) => {
   const inAppContext = Boolean(ctx.ctx)
 
   if (process.env.NODE_ENV === 'development') {
@@ -18,8 +18,7 @@ export const initOnContext = (ctx, options, getProps) => {
     initApolloClient(
       ctx.apolloState || {},
       // inAppContext ? ctx.ctx : ctx,
-      options,
-      getProps
+      options
     )
 
   apolloClient.toJSON = () => null

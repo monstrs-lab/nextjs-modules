@@ -10,17 +10,13 @@ interface Fetch {
 
 interface Options {
   uri: string
-  fetch?: Fetch
-  onUnauthenticated: () => void
+  headers?: any
+  onUnauthenticated?: () => void
 }
 
 let globalApolloClient = null
 
-const defaultFetch = (uri, options: any, props: any) => {
-  return fetch(uri, options)
-}
-
-const createApolloClient = (initialState = {}, options: Options, getProps) => {
+const createApolloClient = (initialState = {}, options: Options) => {
   const errorLink = onError(({ graphQLErrors }) => {
     if (graphQLErrors) {
       graphQLErrors.forEach(graphQLError => {
@@ -38,28 +34,24 @@ const createApolloClient = (initialState = {}, options: Options, getProps) => {
   const httpLink = createHttpLink({
     uri: options.uri,
     credentials: 'same-origin',
-    fetch: (fetchUri, fetchOptions) => {
-      const fetchFn = options.fetch || defaultFetch
-
-      return fetchFn(fetchUri, fetchOptions, getProps ? getProps() : {})
-    },
+    headers: options.headers,
+    fetch,
   })
 
   return new ApolloClient({
-    connectToDevTools: (process as any).browser,
     ssrMode: !(process as any).browser,
     cache: new InMemoryCache().restore(initialState),
     link: ApolloLink.from([errorLink, networkStatusLink.concat(httpLink)]),
   })
 }
 
-export const initApolloClient = (initialState, options, getProps) => {
+export const initApolloClient = (initialState, options) => {
   if (!(process as any).browser) {
-    return createApolloClient(initialState, options, getProps)
+    return createApolloClient(initialState, options)
   }
 
   if (!globalApolloClient) {
-    globalApolloClient = createApolloClient(initialState, options, getProps)
+    globalApolloClient = createApolloClient(initialState, options)
   }
 
   return globalApolloClient
