@@ -9,23 +9,19 @@ export const withEmotion = () => TargetComponent =>
 
       const { css, ids } = extractCritical(props.html)
 
-      props.styles.push(<style key='emotion' dangerouslySetInnerHTML={{ __html: css }} />)
+      props.styles.push(
+        <style
+          key='emotion'
+          data-emotion-css={ids.join(' ')}
+          dangerouslySetInnerHTML={{ __html: css }}
+        />
+      )
 
-      return { ...props, ids }
+      return props
     }
 
     static renderDocument(...args) {
       // @ts-ignore
       return Document.renderDocument(...args)
-    }
-
-    constructor(props) {
-      super(props)
-
-      const { __NEXT_DATA__, ids } = props
-
-      if (ids) {
-        __NEXT_DATA__.ids = ids
-      }
     }
   }
