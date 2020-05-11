@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.12](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-auth@0.3.11...@monstrs/next-app-with-auth@0.3.12) (2020-05-11)
+
+
+### Features
+
+* **common:** apollo provider options ([4d8a0bb](https://github.com/monstrs-lab/nextjs-modules/commit/4d8a0bb22c1dc434e832cc0d345cbe8040374e4c))
+
+
+
+
+
 ## [0.3.11](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-auth@0.3.10...@monstrs/next-app-with-auth@0.3.11) (2020-05-11)
 
 ### Features
