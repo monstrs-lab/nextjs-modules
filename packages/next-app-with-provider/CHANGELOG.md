@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.11](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-provider@0.3.10...@monstrs/next-app-with-provider@0.3.11) (2020-05-11)
 
-
 ### Features
 
-* **common:** update apollo client ([4390cdb](https://github.com/monstrs-lab/nextjs-modules/commit/4390cdba52a5d34da3e731318848d1f1b9ac1d3f))
-
-
-
-
+- **common:** update apollo client ([4390cdb](https://github.com/monstrs-lab/nextjs-modules/commit/4390cdba52a5d34da3e731318848d1f1b9ac1d3f))
 
 ## [0.3.10](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-provider@0.3.9...@monstrs/next-app-with-provider@0.3.10) (2020-05-11)
 

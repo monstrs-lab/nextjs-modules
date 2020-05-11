@@ -14,24 +14,21 @@ interface Options {
   onUnauthenticated: () => void
 }
 
-let client = null
+let globalApolloClient = null
 
 const defaultFetch = (uri, options: any, props: any) => {
   return fetch(uri, options)
 }
 
-// prettier-ignore
-if (!(process as any).browser) {
-  (global as any).fetch = fetch
-} else if (!window.fetch) {
-  (window as any).fetch = fetch
-}
-
-function create(initialState = {}, options: Options, getProps) {
+const createApolloClient = (initialState = {}, options: Options, getProps) => {
   const errorLink = onError(({ graphQLErrors }) => {
     if (graphQLErrors) {
       graphQLErrors.forEach(graphQLError => {
-        if (graphQLError.extensions && graphQLError.extensions.code === 'UNAUTHENTICATED') {
+        if (
+          graphQLError.extensions &&
+          graphQLError.extensions.code === 'UNAUTHENTICATED' &&
+          options.onUnauthenticated
+        ) {
           options.onUnauthenticated()
         }
       })
@@ -56,14 +53,14 @@ function create(initialState = {}, options: Options, getProps) {
   })
 }
 
-export default function initApollo(initialState, options, getProps) {
+export const initApolloClient = (initialState, options, getProps) => {
   if (!(process as any).browser) {
-    return create(initialState, options, getProps)
+    return createApolloClient(initialState, options, getProps)
   }
 
-  if (!client) {
-    client = create(initialState, options, getProps)
+  if (!globalApolloClient) {
+    globalApolloClient = createApolloClient(initialState, options, getProps)
   }
 
-  return client
+  return globalApolloClient
 }
