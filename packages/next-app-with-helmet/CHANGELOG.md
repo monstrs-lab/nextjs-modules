@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.11](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-helmet@0.3.10...@monstrs/next-app-with-helmet@0.3.11) (2020-05-11)
+
+
+### Features
+
+* **common:** init rewrite apollo provider ([a039b8d](https://github.com/monstrs-lab/nextjs-modules/commit/a039b8d481d96a204fe4962f8ea78a510e4355d0))
+
+
+
+
+
 ## [0.3.10](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-helmet@0.3.9...@monstrs/next-app-with-helmet@0.3.10) (2020-05-11)
 
 ### Features
