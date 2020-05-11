@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.8](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.7...@monstrs/next-app-with-apollo@0.3.8) (2020-05-10)
 
-
 ### Features
 
-* **common:** apollo network status ([3eae890](https://github.com/monstrs-lab/nextjs-modules/commit/3eae89053483634cb50174a0ec14c68b055cd39a))
-
-
-
-
+- **common:** apollo network status ([3eae890](https://github.com/monstrs-lab/nextjs-modules/commit/3eae89053483634cb50174a0ec14c68b055cd39a))
 
 ## [0.3.7](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.6...@monstrs/next-app-with-apollo@0.3.7) (2020-04-28)
 

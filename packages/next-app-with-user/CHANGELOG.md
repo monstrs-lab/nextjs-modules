@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @monstrs/next-app-with-user
 
-
-
-
-
 ## [0.3.7](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-user@0.3.6...@monstrs/next-app-with-user@0.3.7) (2020-04-28)
 
 **Note:** Version bump only for package @monstrs/next-app-with-user
