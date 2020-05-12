@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.13](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.12...@monstrs/next-app-with-apollo@0.3.13) (2020-05-12)
+
+
+### Features
+
+* **common:** apollo cache dataIdFromObject ([f940789](https://github.com/monstrs-lab/nextjs-modules/commit/f9407893dd703e7228dbfdb822961b40cd7e4b18))
+
+
+
+
+
 ## [0.3.12](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.11...@monstrs/next-app-with-apollo@0.3.12) (2020-05-11)
 
 
