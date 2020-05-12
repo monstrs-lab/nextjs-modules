@@ -40,7 +40,9 @@ const createApolloClient = (initialState = {}, options: Options) => {
 
   return new ApolloClient({
     ssrMode: !(process as any).browser,
-    cache: new InMemoryCache().restore(initialState),
+    cache: new InMemoryCache({
+      dataIdFromObject: object => object.id,
+    }).restore(initialState),
     link: ApolloLink.from([errorLink, networkStatusLink.concat(httpLink)]),
   })
 }
