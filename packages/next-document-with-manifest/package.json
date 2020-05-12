@@ -28,7 +28,9 @@
     "react": "^16.12.0"
   },
   "publishConfig": {
+    "access": "public",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts"
-  }
+  },
+  "gitHead": "424773366b85e2ce7d195a60a65247f68ecd0d65"
 }
