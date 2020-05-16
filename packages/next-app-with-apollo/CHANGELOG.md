@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.14](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.13...@monstrs/next-app-with-apollo@0.3.14) (2020-05-16)
+
+
+### Features
+
+* **common:** apollo remove cache options ([28069e9](https://github.com/monstrs-lab/nextjs-modules/commit/28069e9040b4103e490aed48ed26a5328f114c5a))
+
+
+
+
+
 ## [0.3.13](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.12...@monstrs/next-app-with-apollo@0.3.13) (2020-05-12)
 
 
