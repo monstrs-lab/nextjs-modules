@@ -1,8 +1,9 @@
-import fetch                                                       from 'isomorphic-unfetch'
-import { ApolloClient, ApolloLink, InMemoryCache, createHttpLink } from '@apollo/client'
-import { onError }                                                 from '@apollo/link-error'
+import fetch                                        from 'isomorphic-unfetch'
+import { ApolloClient, ApolloLink, createHttpLink } from '@apollo/client'
+import { InMemoryCache }                            from '@apollo/client'
+import { onError }                                  from '@apollo/link-error'
 
-import { networkStatusLink }                                       from './network-status'
+import { networkStatusLink }                        from './network-status'
 
 interface Fetch {
   (uri, options: any, props: any): Promise<any>
@@ -40,9 +41,7 @@ const createApolloClient = (initialState = {}, options: Options) => {
 
   return new ApolloClient({
     ssrMode: !(process as any).browser,
-    cache: new InMemoryCache({
-      dataIdFromObject: object => object.id,
-    }).restore(initialState),
+    cache: new InMemoryCache().restore(initialState),
     link: ApolloLink.from([errorLink, networkStatusLink.concat(httpLink)]),
   })
 }
