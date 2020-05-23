@@ -23,7 +23,7 @@
     "next": "9.4.2",
     "react": "16.13.1",
     "react-intl": "4.5.3",
-    "typescript": "3.8.3",
+    "typescript": "3.9.3",
     "universal-cookie": "4.0.3"
   },
   "peerDependencies": {
