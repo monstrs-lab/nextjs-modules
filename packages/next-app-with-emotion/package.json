@@ -24,7 +24,7 @@
     "emotion-theming": "10.0.27",
     "next": "9.4.2",
     "react": "16.13.1",
-    "typescript": "3.8.3"
+    "typescript": "3.9.3"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.17",
