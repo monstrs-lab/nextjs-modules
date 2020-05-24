@@ -5,36 +5,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.14](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.13...@monstrs/next-app-with-apollo@0.3.14) (2020-05-16)
 
-
 ### Features
 
-* **common:** apollo remove cache options ([28069e9](https://github.com/monstrs-lab/nextjs-modules/commit/28069e9040b4103e490aed48ed26a5328f114c5a))
-
-
-
-
+- **common:** apollo remove cache options ([28069e9](https://github.com/monstrs-lab/nextjs-modules/commit/28069e9040b4103e490aed48ed26a5328f114c5a))
 
 ## [0.3.13](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.12...@monstrs/next-app-with-apollo@0.3.13) (2020-05-12)
 
-
 ### Features
 
-* **common:** apollo cache dataIdFromObject ([f940789](https://github.com/monstrs-lab/nextjs-modules/commit/f9407893dd703e7228dbfdb822961b40cd7e4b18))
-
-
-
-
+- **common:** apollo cache dataIdFromObject ([f940789](https://github.com/monstrs-lab/nextjs-modules/commit/f9407893dd703e7228dbfdb822961b40cd7e4b18))
 
 ## [0.3.12](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.11...@monstrs/next-app-with-apollo@0.3.12) (2020-05-11)
 
-
 ### Features
 
-* **common:** apollo provider options ([4d8a0bb](https://github.com/monstrs-lab/nextjs-modules/commit/4d8a0bb22c1dc434e832cc0d345cbe8040374e4c))
-
-
-
-
+- **common:** apollo provider options ([4d8a0bb](https://github.com/monstrs-lab/nextjs-modules/commit/4d8a0bb22c1dc434e832cc0d345cbe8040374e4c))
 
 ## [0.3.11](https://github.com/monstrs-lab/nextjs-modules/compare/@monstrs/next-app-with-apollo@0.3.10...@monstrs/next-app-with-apollo@0.3.11) (2020-05-11)
 

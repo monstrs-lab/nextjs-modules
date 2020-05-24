@@ -1,4 +1,4 @@
-export const authorizationHeader = context => {
+export const authorizationHeader = (context) => {
   const {
     ctx: { req },
   } = context

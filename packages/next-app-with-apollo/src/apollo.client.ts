@@ -20,7 +20,7 @@ let globalApolloClient = null
 const createApolloClient = (initialState = {}, options: Options) => {
   const errorLink = onError(({ graphQLErrors }) => {
     if (graphQLErrors) {
-      graphQLErrors.forEach(graphQLError => {
+      graphQLErrors.forEach((graphQLError) => {
         if (
           graphQLError.extensions &&
           graphQLError.extensions.code === 'UNAUTHENTICATED' &&
