@@ -30,7 +30,7 @@ export type NetworkStatus = {
 
 function isOperationType(operation: Operation, type: OperationTypeNode) {
   return operation.query.definitions.some(
-    definition => definition.kind === 'OperationDefinition' && definition.operation === type
+    (definition) => definition.kind === 'OperationDefinition' && definition.operation === type
   )
 }
 
@@ -112,7 +112,7 @@ function reducer(state: NetworkStatus, action: NetworkStatusAction): NetworkStat
 
   // The identity of the state should be kept if possible to avoid unnecessary re-renders.
   const haveValuesChanged = Object.keys(state).some(
-    key => (updatedState as any)[key] !== (state as any)[key]
+    (key) => (updatedState as any)[key] !== (state as any)[key]
   )
   return haveValuesChanged ? updatedState : state
 }

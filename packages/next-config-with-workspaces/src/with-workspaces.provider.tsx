@@ -21,11 +21,11 @@ export const withWorkspaces = (nextConfig: any = {}) => ({
     )
 
     const includes = packageConfigPaths
-      .filter(pkg => !pkg.includes(cwd))
-      .map(pkg => path.dirname(pkg))
-      .map(dirname => new RegExp(`${dirname}(?!.*node_modules)`))
+      .filter((pkg) => !pkg.includes(cwd))
+      .map((pkg) => path.dirname(pkg))
+      .map((dirname) => new RegExp(`${dirname}(?!.*node_modules)`))
 
-    config.module.rules.forEach(rule => {
+    config.module.rules.forEach((rule) => {
       if (rule.use && rule.use.loader === 'next-babel-loader') {
         rule.include = rule.include.concat(includes) // eslint-disable-line no-param-reassign
       }

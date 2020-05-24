@@ -12,7 +12,7 @@ type Props = {
   token?: string
 }
 
-export const withAuth = () => WrapperComponent =>
+export const withAuth = () => (WrapperComponent) =>
   class WithAuth extends Component<Props> {
     static async getInitialProps(context) {
       let props = {}

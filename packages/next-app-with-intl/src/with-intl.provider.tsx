@@ -32,7 +32,7 @@ export const withIntl = ({
   default: defaultLocale = DEFAULT_LOCALE,
   supported: supportedLocales = [],
   load = (locale: string) => ({}),
-}: Options) => WrapperComponent =>
+}: Options) => (WrapperComponent) =>
   class WithIntl extends Component<Props, State> {
     store: LocaleStore
 
@@ -101,7 +101,7 @@ export const withIntl = ({
       this.store = new LocaleStore(props.locale, supportedLocales)
     }
 
-    onChange = async locale => {
+    onChange = async (locale) => {
       const messages = load ? await load(locale) : {}
 
       const cookies = new Cookies()

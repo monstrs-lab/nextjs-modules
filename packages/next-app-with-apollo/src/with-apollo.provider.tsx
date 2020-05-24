@@ -13,11 +13,9 @@ interface Options {
   resetStoreKeys?: string[]
 }
 
-export const withApollo = ({
-  uri,
-  headers = [],
-  resetStoreKeys = [],
-}: Options) => PageComponent => {
+export const withApollo = ({ uri, headers = [], resetStoreKeys = [] }: Options) => (
+  PageComponent
+) => {
   const WithApollo = ({ apolloClient, apolloState, apolloOptions, ...pageProps }) => {
     let client
     if (apolloClient) {
@@ -38,7 +36,7 @@ export const withApollo = ({
     WithApollo.displayName = `withApollo(${displayName})`
   }
 
-  WithApollo.getInitialProps = async ctx => {
+  WithApollo.getInitialProps = async (ctx) => {
     const inAppContext = Boolean(ctx.ctx)
 
     const apolloOptions = {

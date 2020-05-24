@@ -3,7 +3,7 @@ import { Helmet }           from 'react-helmet'
 
 type Props = {}
 
-export const withHelmet = () => WrapperComponent =>
+export const withHelmet = () => (WrapperComponent) =>
   class WithHelmet extends Component<Props> {
     static async getInitialProps(ctx) {
       let props: any = {}

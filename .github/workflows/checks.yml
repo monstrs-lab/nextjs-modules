@@ -11,33 +11,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Setup Node.js 12
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.10.0'
+          node-version: '13.12'
 
       - name: Install
         run: yarn install
 
-      - name: Build
-        run: yarn lerna run build
-
-      - name: TypeCheck
-        run: yarn mctl check:typecheck
+      - name: Lint
+        run: yarn mctl check lint
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
-      - name: Lint
-        run: yarn mctl check:lint
+      - name: TypeCheck
+        run: yarn mctl check typecheck
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Test
-        run: yarn mctl check:test
+        run: yarn mctl check test
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Release
-        run: yarn mctl check:release
+        run: yarn mctl check release
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'

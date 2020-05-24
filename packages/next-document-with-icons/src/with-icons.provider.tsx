@@ -1,7 +1,7 @@
 import Document from 'next/document'
 import React    from 'react'
 
-export const withIcons = () => TargetComponent =>
+export const withIcons = () => (TargetComponent) =>
   class WithIcons extends TargetComponent {
     static async getInitialProps(context) {
       const props = await super.getInitialProps(context)

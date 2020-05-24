@@ -19,11 +19,11 @@ export default class ApolloLinkNetworkStatus extends ApolloLink {
 
     const subscriber = forward(operation)
 
-    return new Observable(observer => {
+    return new Observable((observer) => {
       let isPending = true
 
       const subscription = subscriber.subscribe({
-        next: result => {
+        next: (result) => {
           isPending = false
 
           this.dispatcher.dispatch({
@@ -34,7 +34,7 @@ export default class ApolloLinkNetworkStatus extends ApolloLink {
           observer.next(result)
         },
 
-        error: networkError => {
+        error: (networkError) => {
           isPending = false
 
           this.dispatcher.dispatch({
