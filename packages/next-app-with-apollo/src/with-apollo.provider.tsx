@@ -11,11 +11,15 @@ interface Options {
   uri: string
   headers?: any
   resetStoreKeys?: string[]
+  onUnauthenticated: () => void
 }
 
-export const withApollo = ({ uri, headers = [], resetStoreKeys = [] }: Options) => (
-  PageComponent
-) => {
+export const withApollo = ({
+  uri,
+  headers = [],
+  resetStoreKeys = [],
+  onUnauthenticated,
+}: Options) => (PageComponent) => {
   const WithApollo = ({ apolloClient, apolloState, apolloOptions, ...pageProps }) => {
     let client
     if (apolloClient) {
@@ -41,6 +45,7 @@ export const withApollo = ({ uri, headers = [], resetStoreKeys = [] }: Options) 
 
     const apolloOptions = {
       uri,
+      onUnauthenticated,
       headers: extractHeaders(ctx, headers),
     }
 
