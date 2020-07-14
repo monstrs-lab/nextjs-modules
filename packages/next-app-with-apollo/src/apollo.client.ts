@@ -18,7 +18,7 @@ interface Options {
 let globalApolloClient = null
 
 const createApolloClient = (initialState = {}, options: Options) => {
-  const errorLink = onError(({ graphQLErrors }) => {
+  const errorLink = onError(({ graphQLErrors, operation }) => {
     if (graphQLErrors) {
       graphQLErrors.forEach((graphQLError) => {
         if (
@@ -29,6 +29,12 @@ const createApolloClient = (initialState = {}, options: Options) => {
           options.onUnauthenticated()
         }
       })
+    }
+
+    const { response } = operation.getContext()
+
+    if (response.status === 401 && options.onUnauthenticated) {
+      options.onUnauthenticated()
     }
   })
 
