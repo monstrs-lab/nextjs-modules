@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/next-config-with-extract-intl-messages",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [

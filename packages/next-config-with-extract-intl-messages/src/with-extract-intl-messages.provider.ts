@@ -1,16 +1,15 @@
 import path from 'path'
 
-export const withExtractIntlMessages = (
-  extractOptions: any = {},
-  reactIntlDefaultPluginOptions: any = {}
-) => (nextConfig: any = {}) => {
-  if (!extractOptions.extract) {
+export const withExtractIntlMessages = (nextConfig: any = {}) => {
+  const { reactIntlExtractOptions = {}, reactIntlOptions = {} }: any = nextConfig
+
+  if (!reactIntlExtractOptions.extract) {
     return nextConfig
   }
 
   const reactIntlPluginOptions = {
-    ...reactIntlDefaultPluginOptions,
-    messagesDir: reactIntlDefaultPluginOptions.messagesDir || path.join(process.cwd(), 'messages'),
+    ...reactIntlOptions,
+    messagesDir: reactIntlOptions.messagesDir || path.join(process.cwd(), 'messages'),
   }
 
   return {
