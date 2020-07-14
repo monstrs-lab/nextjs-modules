@@ -25,7 +25,7 @@ export const withApollo = ({
     if (apolloClient) {
       client = apolloClient
     } else {
-      client = initApolloClient(apolloState, apolloOptions)
+      client = initApolloClient(apolloState, { ...apolloOptions, onUnauthenticated })
     }
 
     return (
@@ -45,7 +45,6 @@ export const withApollo = ({
 
     const apolloOptions = {
       uri,
-      onUnauthenticated,
       headers: extractHeaders(ctx, headers),
     }
 
