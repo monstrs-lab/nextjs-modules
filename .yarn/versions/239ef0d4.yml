@@ -1,5 +1,0 @@
-releases:
-  "@monstrs/next-config-with-extract-intl-messages": patch
-
-undecided:
-  - "@monstrs/next-app-with-apollo"

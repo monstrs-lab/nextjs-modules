@@ -33,3 +33,5 @@ node_modules
 
 # MacOS temporary files
 .DS_Store
+
+.yarn/install-state.gz
