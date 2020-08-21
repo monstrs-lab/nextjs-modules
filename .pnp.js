@@ -73,6 +73,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@monstrs/next-document-with-manifest",
         "reference": "workspace:packages/next-document-with-manifest"
+      },
+      {
+        "name": "@monstrs/next-document-with-viewport",
+        "reference": "workspace:packages/next-document-with-viewport"
       }
     ],
     "enableTopLevelFallback": true,
@@ -91,6 +95,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@monstrs/next-document-with-helmet", ["workspace:packages/next-document-with-helmet"]],
       ["@monstrs/next-document-with-icons", ["workspace:packages/next-document-with-icons"]],
       ["@monstrs/next-document-with-manifest", ["workspace:packages/next-document-with-manifest"]],
+      ["@monstrs/next-document-with-viewport", ["workspace:packages/next-document-with-viewport"]],
       ["nextjs-modules", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -4082,6 +4087,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/next-document-with-manifest/",
           "packageDependencies": [
             ["@monstrs/next-document-with-manifest", "workspace:packages/next-document-with-manifest"],
+            ["@types/node", "npm:14.0.5"],
+            ["@types/react", "npm:16.9.35"],
+            ["@types/react-dom", "npm:16.9.8"],
+            ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
+            ["react", "npm:16.13.1"],
+            ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=8cac75"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@monstrs/next-document-with-viewport", [
+        ["workspace:packages/next-document-with-viewport", {
+          "packageLocation": "./packages/next-document-with-viewport/",
+          "packageDependencies": [
+            ["@monstrs/next-document-with-viewport", "workspace:packages/next-document-with-viewport"],
+            ["@monstrs/tsconfig", "npm:0.2.0"],
             ["@types/node", "npm:14.0.5"],
             ["@types/react", "npm:16.9.35"],
             ["@types/react-dom", "npm:16.9.8"],
