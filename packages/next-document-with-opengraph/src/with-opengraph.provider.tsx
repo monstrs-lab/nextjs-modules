@@ -1,15 +1,18 @@
 import Document from 'next/document'
 import React    from 'react'
 
-const defaultViewport =
-  'width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no'
+export interface OpenGraphProviderOptinos {
+  image?: string
+}
 
-export const withViewport = (viewport = defaultViewport) => (TargetComponent) =>
-  class WithViewport extends TargetComponent {
+export const withOpenGraph = ({ image }: OpenGraphProviderOptinos = {}) => (TargetComponent) =>
+  class WithOpenGraph extends TargetComponent {
     static async getInitialProps(context) {
       const props = await super.getInitialProps(context)
 
-      props.head.push(<meta name='viewport' content={viewport} />)
+      if (image) {
+        props.head.push(<meta property='og:image' content={image} />)
+      }
 
       return props
     }
