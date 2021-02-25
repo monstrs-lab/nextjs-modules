@@ -1,0 +1,26 @@
+{
+  "name": "@monstrs/next-config-with-pnp-workspaces",
+  "version": "0.3.7",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -r -f dist",
+    "prepublishOnly": "yarn run build",
+    "prebuild": "yarn clean",
+    "build": "mctl library build"
+  },
+  "devDependencies": {
+    "@monstrs/mctl-cli": "0.2.78",
+    "@types/node": "14.0.5",
+    "next": "^10",
+    "typescript": "3.9.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
