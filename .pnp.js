@@ -135,7 +135,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "virtual:742ac82393766919e7b1a22cff94f65e5f639a724ee26ee5577480f43adbfaf348266c025152af19257448e362c503dbbf88c46176fab4370b5b7857b7c05782#npm:2.0.0-rc.22"],
             ["eslint-import-resolver-node", "npm:0.3.3"],
             ["graphql", "npm:15.0.0"],
-            ["husky", "npm:4.2.5"],
+            ["husky", "npm:5.2.0"],
             ["lerna", "npm:3.21.0"],
             ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=cc6730"]
           ],
@@ -10209,15 +10209,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["compare-versions", [
-        ["npm:3.6.0", {
-          "packageLocation": "./.yarn/cache/compare-versions-npm-3.6.0-0bb57ed638-0952526450.zip/node_modules/compare-versions/",
-          "packageDependencies": [
-            ["compare-versions", "npm:3.6.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["component-emitter", [
         ["npm:1.3.0", {
           "packageLocation": "./.yarn/cache/component-emitter-npm-1.3.0-4b848565b9-fc4edbf101.zip/node_modules/component-emitter/",
@@ -13352,16 +13343,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["find-versions", [
-        ["npm:3.2.0", {
-          "packageLocation": "./.yarn/cache/find-versions-npm-3.2.0-2a87d094e9-2ddc16b426.zip/node_modules/find-versions/",
-          "packageDependencies": [
-            ["find-versions", "npm:3.2.0"],
-            ["semver-regex", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
       ["findup-sync", [
         ["npm:3.0.0", {
           "packageLocation": "./.yarn/cache/findup-sync-npm-3.0.0-aed78587f5-be03bd98fc.zip/node_modules/findup-sync/",
@@ -14590,20 +14571,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["husky", [
-        ["npm:4.2.5", {
-          "packageLocation": "./.yarn/unplugged/husky-npm-4.2.5-30d80a2ef8/node_modules/husky/",
+        ["npm:5.2.0", {
+          "packageLocation": "./.yarn/cache/husky-npm-5.2.0-ceba7e593c-a5a99bea46.zip/node_modules/husky/",
           "packageDependencies": [
-            ["husky", "npm:4.2.5"],
-            ["chalk", "npm:4.0.0"],
-            ["ci-info", "npm:2.0.0"],
-            ["compare-versions", "npm:3.6.0"],
-            ["cosmiconfig", "npm:6.0.0"],
-            ["find-versions", "npm:3.2.0"],
-            ["opencollective-postinstall", "npm:2.0.2"],
-            ["pkg-dir", "npm:4.2.0"],
-            ["please-upgrade-node", "npm:3.2.0"],
-            ["slash", "npm:3.0.0"],
-            ["which-pm-runs", "npm:1.0.0"]
+            ["husky", "npm:5.2.0"]
           ],
           "linkType": "HARD",
         }]
@@ -18058,7 +18029,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/pnpify", "virtual:742ac82393766919e7b1a22cff94f65e5f639a724ee26ee5577480f43adbfaf348266c025152af19257448e362c503dbbf88c46176fab4370b5b7857b7c05782#npm:2.0.0-rc.22"],
             ["eslint-import-resolver-node", "npm:0.3.3"],
             ["graphql", "npm:15.0.0"],
-            ["husky", "npm:4.2.5"],
+            ["husky", "npm:5.2.0"],
             ["lerna", "npm:3.21.0"],
             ["typescript", "patch:typescript@npm%3A3.9.3#builtin<compat/typescript>::version=3.9.3&hash=cc6730"]
           ],
@@ -18694,15 +18665,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["onetime", "npm:5.1.2"],
             ["mimic-fn", "npm:2.1.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["opencollective-postinstall", [
-        ["npm:2.0.2", {
-          "packageLocation": "./.yarn/cache/opencollective-postinstall-npm-2.0.2-08cf9e2f3d-f71a908d09.zip/node_modules/opencollective-postinstall/",
-          "packageDependencies": [
-            ["opencollective-postinstall", "npm:2.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -21633,15 +21595,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/semver-compare-npm-1.0.0-33f7033df0-9f3a74ca5f.zip/node_modules/semver-compare/",
           "packageDependencies": [
             ["semver-compare", "npm:1.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["semver-regex", [
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/semver-regex-npm-2.0.0-218c804009-9b96cc8bd5.zip/node_modules/semver-regex/",
-          "packageDependencies": [
-            ["semver-regex", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]

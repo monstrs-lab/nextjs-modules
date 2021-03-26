@@ -2,6 +2,7 @@
   "name": "nextjs-modules",
   "private": true,
   "scripts": {
+    "postinstall": "husky install .config/husky",
     "lint": "mctl lint",
     "test": "mctl test",
     "commit": "mctl commit",
@@ -18,17 +19,11 @@
     "@yarnpkg/pnpify": "^2.0.0-rc.22",
     "eslint-import-resolver-node": "^0.3.3",
     "graphql": "^15.0.0",
-    "husky": "4.2.5",
+    "husky": "5.2.0",
     "lerna": "3.21.0",
     "typescript": "3.9.3"
   },
   "workspaces": [
     "packages/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "mctl precommit",
-      "commit-msg": "mctl commitmsg"
-    }
-  }
+  ]
 }
