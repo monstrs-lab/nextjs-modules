@@ -34,5 +34,5 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          message: '[ci skip] publish'
+          message: 'chore(common): publish'
           branch: master
