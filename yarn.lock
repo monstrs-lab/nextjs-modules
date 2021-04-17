@@ -2611,7 +2611,6 @@ __metadata:
     "@apollo/link-error": ^2.0.0-beta.3
     "@apollo/link-schema": ^2.0.0-beta.3
     "@apollo/react-ssr": 4.0.0-beta.1
-    "@monstrs/tsconfig": ^0.2.0
     "@types/graphql": 14.5.0
     "@types/node": 14.14.41
     "@types/react": ^16.14.5
@@ -2621,7 +2620,6 @@ __metadata:
     next: ^9.4.2
     react: 16.13.1
     react-dom: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     "@apollo/client": ^3.0.0-james.33.0
     "@apollo/react-ssr": ^4.0.0-beta.1
@@ -2641,7 +2639,6 @@ __metadata:
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     "@monstrs/react-auth": ^0.1.0
     react: ^16.12.0
@@ -2652,7 +2649,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monstrs/next-app-with-body-parser@workspace:packages/next-app-with-body-parser"
   dependencies:
-    "@monstrs/mctl-cli": 0.2.101
     "@types/node": 14.14.41
     "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.12
@@ -2661,7 +2657,6 @@ __metadata:
     querystring: ^0.2.1
     raw-body: ^2.4.1
     react: 16.13.1
-    typescript: 4.2.4
   languageName: unknown
   linkType: soft
 
@@ -2677,7 +2672,6 @@ __metadata:
     emotion-theming: 10.0.27
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     "@emotion/core": ^10.0.17
     emotion: ^10.0.17
@@ -2696,7 +2690,6 @@ __metadata:
     next: ^9.4.2
     react: 16.13.1
     react-helmet: 6.0.0
-    typescript: 4.2.4
   peerDependencies:
     react: ^16.12.0
     react-helmet: ^6.0.0
@@ -2714,7 +2707,6 @@ __metadata:
     next: ^9.4.2
     react: 16.13.1
     react-intl: 4.5.11
-    typescript: 4.2.4
     universal-cookie: 4.0.4
   peerDependencies:
     "@monstrs/react-locale": ^0.1.0
@@ -2733,7 +2725,6 @@ __metadata:
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     react: ^16.12.0
   languageName: unknown
@@ -2749,7 +2740,6 @@ __metadata:
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     "@monstrs/react-user": ^0.1.0
     react: ^16.12.0
@@ -2762,12 +2752,10 @@ __metadata:
   dependencies:
     "@babel/core": ^7
     "@babel/helper-plugin-utils": ^7.10.4
-    "@monstrs/tsconfig": ^0.2.0
     "@types/node": 14.14.41
     babel-plugin-react-intl: ^7.5.28
     globby: ^11.0.3
     next: ^9.4.2
-    typescript: 4.2.4
   languageName: unknown
   linkType: soft
 
@@ -2775,10 +2763,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monstrs/next-config-with-pnp-workspaces@workspace:packages/next-config-with-pnp-workspaces"
   dependencies:
-    "@monstrs/mctl-cli": 0.2.101
     "@types/node": 14.14.41
     next: ^10
-    typescript: 4.2.4
   languageName: unknown
   linkType: soft
 
@@ -2790,7 +2776,6 @@ __metadata:
     "@types/node": 14.14.41
     globby: ^11.0.3
     next: ^9.4.2
-    typescript: 4.2.4
   languageName: unknown
   linkType: soft
 
@@ -2804,7 +2789,6 @@ __metadata:
     emotion-server: 10.0.27
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     emotion-server: ^10.0.17
     next: ^9.1.2
@@ -2816,13 +2800,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monstrs/next-document-with-gtag@workspace:packages/next-document-with-gtag"
   dependencies:
-    "@monstrs/tsconfig": ^0.2.0
     "@types/node": 14.14.41
     "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     next: ^9.1.2
     react: ^16.12.0
@@ -2839,7 +2821,6 @@ __metadata:
     next: ^9.4.2
     react: 16.13.1
     react-helmet: 6.0.0
-    typescript: 4.2.4
   peerDependencies:
     next: ^9.1.2
     react: ^16.12.0
@@ -2856,7 +2837,6 @@ __metadata:
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     next: ^9.1.2
     react: ^16.12.0
@@ -2872,7 +2852,6 @@ __metadata:
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     next: ^9.1.2
     react: ^16.12.0
@@ -2883,13 +2862,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monstrs/next-document-with-opengraph@workspace:packages/next-document-with-opengraph"
   dependencies:
-    "@monstrs/tsconfig": ^0.2.0
     "@types/node": 14.14.41
     "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     next: ^9.1.2
     react: ^16.12.0
@@ -2900,13 +2877,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monstrs/next-document-with-viewport@workspace:packages/next-document-with-viewport"
   dependencies:
-    "@monstrs/tsconfig": ^0.2.0
     "@types/node": 14.14.41
     "@types/react": ^16.14.5
     "@types/react-dom": ^16.9.12
     next: ^9.4.2
     react: 16.13.1
-    typescript: 4.2.4
   peerDependencies:
     next: ^9.1.2
     react: ^16.12.0
@@ -2970,13 +2945,6 @@ __metadata:
     "@monstrs/webpack-source-map": 0.0.4
     stack-utils: ^2.0.3
   checksum: 96f9b5b236d7dfc6ee01ffcf8a80601fa39c40e29b965d0a8d3d7aea0d46d42af6a9e4b9a163612304c5093c7113356a22783553a6f06fc6bfef0f46b27578c7
-  languageName: node
-  linkType: hard
-
-"@monstrs/tsconfig@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "@monstrs/tsconfig@npm:0.2.0"
-  checksum: ac2e277a3e292dbeed451905be43eba68654b52754a5e555202c46fba7d162451521660ccb68d6bb9dac4afd8203a4abe31adb18142dad3be8a13d3f6c9787bb
   languageName: node
   linkType: hard
 
