@@ -34,5 +34,7 @@ node_modules
 # MacOS temporary files
 .DS_Store
 
+dist/
+
 .yarn/install-state.gz
 .yarn/build-state.yml

@@ -3944,7 +3944,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/link-error", "npm:2.0.0-beta.3"],
             ["@apollo/link-schema", "virtual:cfefafb7e56c32b79f50802ae02b98e246c45e7e77d7ef5927302e96357fb63d936cdf138a74977694ece0924c407478ae04edd5e78a1c0106f414fe4de4ff48#npm:2.0.0-beta.3"],
             ["@apollo/react-ssr", "virtual:cfefafb7e56c32b79f50802ae02b98e246c45e7e77d7ef5927302e96357fb63d936cdf138a74977694ece0924c407478ae04edd5e78a1c0106f414fe4de4ff48#npm:4.0.0-beta.1"],
-            ["@monstrs/tsconfig", "npm:0.2.0"],
             ["@types/graphql", "npm:14.5.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:16.14.5"],
@@ -3953,8 +3952,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["isomorphic-unfetch", "npm:3.1.0"],
             ["next", "virtual:cfefafb7e56c32b79f50802ae02b98e246c45e7e77d7ef5927302e96357fb63d936cdf138a74977694ece0924c407478ae04edd5e78a1c0106f414fe4de4ff48#npm:9.4.2"],
             ["react", "npm:16.13.1"],
-            ["react-dom", "virtual:cfefafb7e56c32b79f50802ae02b98e246c45e7e77d7ef5927302e96357fb63d936cdf138a74977694ece0924c407478ae04edd5e78a1c0106f414fe4de4ff48#npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react-dom", "virtual:cfefafb7e56c32b79f50802ae02b98e246c45e7e77d7ef5927302e96357fb63d936cdf138a74977694ece0924c407478ae04edd5e78a1c0106f414fe4de4ff48#npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -3969,8 +3967,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -3980,7 +3977,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/next-app-with-body-parser/",
           "packageDependencies": [
             ["@monstrs/next-app-with-body-parser", "workspace:packages/next-app-with-body-parser"],
-            ["@monstrs/mctl-cli", "virtual:742ac82393766919e7b1a22cff94f65e5f639a724ee26ee5577480f43adbfaf348266c025152af19257448e362c503dbbf88c46176fab4370b5b7857b7c05782#npm:0.2.101"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
@@ -3988,8 +3984,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
             ["querystring", "npm:0.2.1"],
             ["raw-body", "npm:2.4.1"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4006,8 +4001,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["emotion", "npm:10.0.27"],
             ["emotion-theming", "virtual:8dc7990087b5244a3bb70723a99b0d9b492780f5a5e76c53bb6e756bb044e73144e7f5b213e97000e7f9d4ba37e16b9ced0965d593c6df71df199d75dfa452a9#npm:10.0.27"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4022,8 +4016,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
             ["react", "npm:16.13.1"],
-            ["react-helmet", "virtual:d2a749709583493cf1d0389e5a0d9536d3390d6508dbf803d80aff32196a73de97652febd9e8fff6cf86aa67f3e9b114da5e03cf87eba79326d8dab843a1b44c#npm:6.0.0"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react-helmet", "virtual:d2a749709583493cf1d0389e5a0d9536d3390d6508dbf803d80aff32196a73de97652febd9e8fff6cf86aa67f3e9b114da5e03cf87eba79326d8dab843a1b44c#npm:6.0.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -4040,7 +4033,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
             ["react", "npm:16.13.1"],
             ["react-intl", "virtual:fc712b31a3492db588265d6dc4e5a40ec43dda87e7a9d421515b72783c5a2cae4c529e8110357eab58cd6b321d9f291a144fb182671771b70e7b80f013576702#npm:4.5.11"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
             ["universal-cookie", "npm:4.0.4"]
           ],
           "linkType": "SOFT",
@@ -4055,8 +4047,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4071,8 +4062,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4084,12 +4074,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@monstrs/next-config-with-extract-intl-messages", "workspace:packages/next-config-with-extract-intl-messages"],
             ["@babel/core", "npm:7.10.4"],
             ["@babel/helper-plugin-utils", "npm:7.10.4"],
-            ["@monstrs/tsconfig", "npm:0.2.0"],
             ["@types/node", "npm:14.14.41"],
             ["babel-plugin-react-intl", "npm:7.7.0"],
             ["globby", "npm:11.0.3"],
-            ["next", "virtual:6b324fa794ae64acbfa56addaa0eda2dcf02e9a70ef7cae20fe895e892ffa424d858a3e647f08ddef3b1e8ff65cc55bb533cd935f7bcf6090b8541109ca9bd86#npm:9.4.2"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["next", "virtual:6b324fa794ae64acbfa56addaa0eda2dcf02e9a70ef7cae20fe895e892ffa424d858a3e647f08ddef3b1e8ff65cc55bb533cd935f7bcf6090b8541109ca9bd86#npm:9.4.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -4099,10 +4087,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/next-config-with-pnp-workspaces/",
           "packageDependencies": [
             ["@monstrs/next-config-with-pnp-workspaces", "workspace:packages/next-config-with-pnp-workspaces"],
-            ["@monstrs/mctl-cli", "virtual:742ac82393766919e7b1a22cff94f65e5f639a724ee26ee5577480f43adbfaf348266c025152af19257448e362c503dbbf88c46176fab4370b5b7857b7c05782#npm:0.2.101"],
             ["@types/node", "npm:14.14.41"],
-            ["next", "virtual:48cf31d4d4473de0987a76cdb74495e0942d4b5e7a25683ac5cd4d994ccbff818fbcf091b287b8d5b5c15cce7cd0d9d70bd9e139d7436c8a957832b27ba1dd81#npm:10.0.3"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["next", "virtual:48cf31d4d4473de0987a76cdb74495e0942d4b5e7a25683ac5cd4d994ccbff818fbcf091b287b8d5b5c15cce7cd0d9d70bd9e139d7436c8a957832b27ba1dd81#npm:10.0.3"]
           ],
           "linkType": "SOFT",
         }]
@@ -4115,8 +4101,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/project", "npm:3.21.0"],
             ["@types/node", "npm:14.14.41"],
             ["globby", "npm:11.0.3"],
-            ["next", "virtual:6b324fa794ae64acbfa56addaa0eda2dcf02e9a70ef7cae20fe895e892ffa424d858a3e647f08ddef3b1e8ff65cc55bb533cd935f7bcf6090b8541109ca9bd86#npm:9.4.2"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["next", "virtual:6b324fa794ae64acbfa56addaa0eda2dcf02e9a70ef7cae20fe895e892ffa424d858a3e647f08ddef3b1e8ff65cc55bb533cd935f7bcf6090b8541109ca9bd86#npm:9.4.2"]
           ],
           "linkType": "SOFT",
         }]
@@ -4131,8 +4116,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:16.9.12"],
             ["emotion-server", "virtual:26b9b49ec70ed98ceaa73ec321c4aeb55efc064ab2bf035c1a220aa19096cf28f93a1e2a5d1661b47b362158a9d995083e729ea31ff9f5256fcca331702666eb#npm:10.0.27"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4142,13 +4126,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/next-document-with-gtag/",
           "packageDependencies": [
             ["@monstrs/next-document-with-gtag", "workspace:packages/next-document-with-gtag"],
-            ["@monstrs/tsconfig", "npm:0.2.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4163,8 +4145,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
             ["react", "npm:16.13.1"],
-            ["react-helmet", "virtual:d2a749709583493cf1d0389e5a0d9536d3390d6508dbf803d80aff32196a73de97652febd9e8fff6cf86aa67f3e9b114da5e03cf87eba79326d8dab843a1b44c#npm:6.0.0"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react-helmet", "virtual:d2a749709583493cf1d0389e5a0d9536d3390d6508dbf803d80aff32196a73de97652febd9e8fff6cf86aa67f3e9b114da5e03cf87eba79326d8dab843a1b44c#npm:6.0.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -4178,8 +4159,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4193,8 +4173,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4204,13 +4183,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/next-document-with-opengraph/",
           "packageDependencies": [
             ["@monstrs/next-document-with-opengraph", "workspace:packages/next-document-with-opengraph"],
-            ["@monstrs/tsconfig", "npm:0.2.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4220,13 +4197,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/next-document-with-viewport/",
           "packageDependencies": [
             ["@monstrs/next-document-with-viewport", "workspace:packages/next-document-with-viewport"],
-            ["@monstrs/tsconfig", "npm:0.2.0"],
             ["@types/node", "npm:14.14.41"],
             ["@types/react", "npm:16.14.5"],
             ["@types/react-dom", "npm:16.9.12"],
             ["next", "virtual:db3c3c6fda128b3f55e16968176ac2bd47f09fac9ce27783fd3c0baacf8c4b29146769a2778648e2a2df08a8c14ea3ab8f0952f9052e6d038a39412685d1c2db#npm:9.4.2"],
-            ["react", "npm:16.13.1"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+            ["react", "npm:16.13.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -4355,15 +4330,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@monstrs/stack-trace", "npm:0.0.4"],
             ["@monstrs/webpack-source-map", "npm:0.0.4"],
             ["stack-utils", "npm:2.0.3"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@monstrs/tsconfig", [
-        ["npm:0.2.0", {
-          "packageLocation": "./.yarn/cache/@monstrs-tsconfig-npm-0.2.0-09ac6dba3a-ac2e277a3e.zip/node_modules/@monstrs/tsconfig/",
-          "packageDependencies": [
-            ["@monstrs/tsconfig", "npm:0.2.0"]
           ],
           "linkType": "HARD",
         }]
