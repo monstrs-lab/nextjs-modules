@@ -19,11 +19,13 @@ const getBodyInitialProps = async ({ ctx }): Promise<BodyPageProps> => {
 
     if (type === 'application/json' || type === 'application/ld+json') {
       return JSON.parse(body)
-    } else if (type === 'application/x-www-form-urlencoded') {
-      return decode(body)
-    } else {
-      return {}
     }
+
+    if (type === 'application/x-www-form-urlencoded') {
+      return decode(body)
+    }
+
+    return {}
   } catch (error) {
     return {}
   }

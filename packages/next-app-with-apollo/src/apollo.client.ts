@@ -5,10 +5,6 @@ import { onError }                                  from '@apollo/link-error'
 
 import { networkStatusLink }                        from './network-status'
 
-interface Fetch {
-  (uri, options: any, props: any): Promise<any>
-}
-
 interface Options {
   uri: string
   headers?: any
@@ -58,6 +54,7 @@ export const initApolloClient = (initialState, options) => {
   }
 
   if (!globalApolloClient) {
+    // @ts-ignore
     globalApolloClient = createApolloClient(initialState, options)
   }
 

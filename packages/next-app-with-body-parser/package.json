@@ -13,17 +13,17 @@
     "build": "mctl library build"
   },
   "devDependencies": {
-    "@monstrs/mctl-cli": "0.2.78",
-    "@types/node": "14.0.5",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
+    "@monstrs/mctl-cli": "0.2.101",
+    "@types/node": "14.14.41",
+    "@types/react": "^16.14.5",
+    "@types/react-dom": "^16.9.12",
     "next": "^9.4.2",
     "react": "16.13.1",
-    "typescript": "3.9.3"
+    "typescript": "4.2.4"
   },
   "dependencies": {
     "content-type": "^1.0.4",
-    "querystring": "^0.2.0",
+    "querystring": "^0.2.1",
     "raw-body": "^2.4.1"
   },
   "publishConfig": {

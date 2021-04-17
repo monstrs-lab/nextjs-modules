@@ -30,6 +30,7 @@ const templateLiteralVisitor = {
         // eslint-disable-next-line no-restricted-syntax
         for (const elem of path.node.quasis) {
           if (elem.value.cooked) {
+            // @ts-ignore
             nodes.push(t.stringLiteral(elem.value.cooked))
           }
 
@@ -39,14 +40,17 @@ const templateLiteralVisitor = {
             const { node } = expr
 
             if (t.isIdentifier(node) && node.name === this.MessagesScopeIdentifier) {
+              // @ts-ignore
               nodes.push(t.stringLiteral(this.MessagesScope))
             } else if (!t.isStringLiteral(node, { value: '' })) {
+              // @ts-ignore
               nodes.push(node)
             }
           }
         }
 
         if (nodes.every((node) => t.isStringLiteral(node))) {
+          // @ts-ignore
           path.replaceWith(t.stringLiteral(nodes.reduce((result, node) => result + node.value, '')))
         }
       }
