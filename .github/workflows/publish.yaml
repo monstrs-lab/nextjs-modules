@@ -23,7 +23,9 @@ jobs:
         run: yarn install
 
       - name: Npm Publish
-        run: yarn mctl version:publish --verbose
+        run: |
+          yarn version apply --all
+          yarn workspaces changed foreach --verbose --topological --no-private npm publish --access public
         env:
           YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 

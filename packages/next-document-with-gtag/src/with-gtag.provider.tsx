@@ -1,20 +1,20 @@
 import Document from 'next/document'
 import React    from 'react'
 
-export const withGtag = (gaTrackingId?: string) => TargetComponent =>
-class WithGtag extends TargetComponent {
-  static async getInitialProps(context) {
-    const props = await super.getInitialProps(context)
+export const withGtag = (gaTrackingId?: string) => (TargetComponent) =>
+  class WithGtag extends TargetComponent {
+    static async getInitialProps(context) {
+      const props = await super.getInitialProps(context)
 
-    if (gaTrackingId) {
-      props.head.push(
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`} />
-      )
+      if (gaTrackingId) {
+        props.head.push(
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaTrackingId}`} />
+        )
 
-      props.head.push(
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        props.head.push(
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag.pageview = function(info) {gtag('config', '${gaTrackingId}', info)}
@@ -24,16 +24,16 @@ class WithGtag extends TargetComponent {
           page_location: window.location.href,
         });
       `,
-          }}
-        />
-      )
+            }}
+          />
+        )
+      }
+
+      return props
     }
 
-    return props
+    static renderDocument(...args) {
+      // @ts-ignore
+      return Document.renderDocument(...args)
+    }
   }
-
-  static renderDocument(...args) {
-    // @ts-ignore
-    return Document.renderDocument(...args)
-  }
-}

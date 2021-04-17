@@ -26,7 +26,7 @@ jobs:
         run: yarn install
 
       - name: Version
-        run: yarn mctl version:github --no-private --verbose
+        run: yarn workspaces changed foreach --no-private --verbose version patch --deferred
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 

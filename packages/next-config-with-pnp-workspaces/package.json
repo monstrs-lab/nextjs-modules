@@ -13,10 +13,10 @@
     "build": "mctl library build"
   },
   "devDependencies": {
-    "@monstrs/mctl-cli": "0.2.78",
-    "@types/node": "14.0.5",
+    "@monstrs/mctl-cli": "0.2.101",
+    "@types/node": "14.14.41",
     "next": "^10",
-    "typescript": "3.9.3"
+    "typescript": "4.2.4"
   },
   "publishConfig": {
     "access": "public",
