@@ -18,25 +18,25 @@ type Options = {
 
 type Props = {}
 
-export const withEmotion = ({ Provider = ThemeProvider, injectGlobalStyles }: Options) => (
-  WrapperComponent
-) =>
-  class WithEmotion extends Component<Props> {
-    constructor(props, context) {
-      super(props, context)
+export const withEmotion =
+  ({ Provider = ThemeProvider, injectGlobalStyles }: Options) =>
+  (WrapperComponent) =>
+    class WithEmotion extends Component<Props> {
+      constructor(props, context) {
+        super(props, context)
 
-      if (injectGlobalStyles) {
-        injectGlobalStyles()
+        if (injectGlobalStyles) {
+          injectGlobalStyles()
+        }
+      }
+
+      render() {
+        return (
+          <CacheProvider value={cache}>
+            <Provider>
+              <WrapperComponent {...this.props} />
+            </Provider>
+          </CacheProvider>
+        )
       }
     }
-
-    render() {
-      return (
-        <CacheProvider value={cache}>
-          <Provider>
-            <WrapperComponent {...this.props} />
-          </Provider>
-        </CacheProvider>
-      )
-    }
-  }
