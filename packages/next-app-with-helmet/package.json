@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/next-app-with-helmet",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [

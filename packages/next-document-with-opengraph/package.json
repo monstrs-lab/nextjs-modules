@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/next-document-with-opengraph",
-  "version": "0.3.16",
+  "version": "0.3.17",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
