@@ -1,5 +1,4 @@
 releases:
-  "@monstrs/next-app-with-apollo": patch
   "@monstrs/next-app-with-auth": patch
   "@monstrs/next-app-with-body-parser": patch
   "@monstrs/next-app-with-emotion": patch
