@@ -13,5 +13,8 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "resolutions": {
+    "next": "11.1.0"
+  }
 }
