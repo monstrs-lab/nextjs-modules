@@ -5,8 +5,7 @@ export interface OpenGraphProviderOptinos {
   image?: string
 }
 
-export const withOpenGraph =
-  ({ image }: OpenGraphProviderOptinos = {}) =>
+export const withOpenGraph = ({ image }: OpenGraphProviderOptinos = {}) =>
   (TargetComponent) =>
     class WithOpenGraph extends TargetComponent {
       static async getInitialProps(context) {

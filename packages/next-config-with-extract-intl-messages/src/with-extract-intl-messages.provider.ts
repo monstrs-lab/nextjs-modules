@@ -26,7 +26,6 @@ export const withExtractIntlMessages = (nextConfig: any = {}) => {
         }
       })
 
-      // eslint-disable-next-line global-require
       const { CombineMessagesPlugin } = require('./combine-messages.webpack-plugin')
 
       const prefix = options.isServer ? 'server' : 'client'

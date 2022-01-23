@@ -1,6 +1,8 @@
+import { UserProvider } from '@monstrs/react-user'
+
 /* eslint-disable no-underscore-dangle */
-import React, { Component } from 'react'
-import { UserProvider }     from '@monstrs/react-user'
+import React            from 'react'
+import { Component }    from 'react'
 
 declare global {
   interface Window {
@@ -30,7 +32,7 @@ export const withUser = () => (WrapperComponent) =>
       if (req && req.get('x-user')) {
         user = req.get('x-user')
       } else if ((process as any).browser) {
-        user = window.__NEXT_DATA__.props.user // eslint-disable-line prefer-destructuring
+        user = window.__NEXT_DATA__.props.user
       }
 
       return {

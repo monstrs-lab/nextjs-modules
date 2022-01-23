@@ -1,6 +1,7 @@
-/* eslint-disable no-underscore-dangle */
-import React, { Component } from 'react'
-import { AuthProvider }     from '@monstrs/react-auth'
+import { AuthProvider } from '@monstrs/react-auth'
+
+import React            from 'react'
+import { Component }    from 'react'
 
 declare global {
   interface Window {
@@ -30,7 +31,8 @@ export const withAuth = () => (WrapperComponent) =>
       if (req && req.get('authorization')) {
         token = req.get('authorization')
       } else if ((process as any).browser) {
-        token = window.__NEXT_DATA__.props.token // eslint-disable-line prefer-destructuring
+        // eslint-disable-next-line no-underscore-dangle
+        token = window.__NEXT_DATA__.props.token
       }
 
       return {

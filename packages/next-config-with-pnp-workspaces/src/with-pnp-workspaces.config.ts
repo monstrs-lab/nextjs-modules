@@ -1,5 +1,5 @@
 // @ts-ignore
-import pnpApi from 'pnpapi' // eslint-disable-line
+import pnpApi from 'pnpapi'
 
 const isNextBabelLoaderRuleUse = (use) =>
   use?.loader === 'next-babel-loader' || use?.loader?.includes('/next/dist/build/babel/loader')

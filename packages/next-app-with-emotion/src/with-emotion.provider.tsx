@@ -1,9 +1,9 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable react/no-deprecated */
-import React, { Component } from 'react'
-import { CacheProvider }    from '@emotion/core'
-import { ThemeProvider }    from 'emotion-theming'
-import { cache }            from 'emotion'
+import { CacheProvider } from '@emotion/core'
+
+import React             from 'react'
+import { ThemeProvider } from 'emotion-theming'
+import { Component }     from 'react'
+import { cache }         from 'emotion'
 
 declare global {
   interface Window {
@@ -18,8 +18,7 @@ type Options = {
 
 type Props = {}
 
-export const withEmotion =
-  ({ Provider = ThemeProvider, injectGlobalStyles }: Options) =>
+export const withEmotion = ({ Provider = ThemeProvider, injectGlobalStyles }: Options) =>
   (WrapperComponent) =>
     class WithEmotion extends Component<Props> {
       constructor(props, context) {
