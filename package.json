@@ -1,20 +1,32 @@
 {
   "name": "nextjs-modules",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "next": "12.0.8"
+  },
   "devDependencies": {
-    "@monstrs/mctl-cli": "0.2.112",
+    "@jest/core": "^27.4.7",
+    "@monstrs/config-jest": "^0.0.10",
+    "@monstrs/schematics": "^0.0.15",
+    "@types/eslint": "^8",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.41",
     "@types/react": "^16.14.5",
+    "eslint": "^8.7.0",
     "eslint-import-resolver-node": "^0.3.3",
     "graphql": "^15.0.0",
     "husky": "6.0.0",
     "typescript": "4.3.4"
   },
-  "workspaces": [
-    "packages/*"
-  ],
-  "resolutions": {
-    "next": "11.1.0"
+  "tools": {
+    "schematic": {
+      "collection": "@monstrs/schematics",
+      "schematic": "project",
+      "type": "libraries",
+      "migration": 1642949669809
+    }
   }
 }

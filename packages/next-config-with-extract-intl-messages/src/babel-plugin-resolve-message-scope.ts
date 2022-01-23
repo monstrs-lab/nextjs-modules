@@ -1,7 +1,9 @@
-import fs                from 'fs'
-import { types as t }    from '@babel/core'
-import { declare }       from '@babel/helper-plugin-utils'
-import { dirname, join } from 'path'
+import { types as t } from '@babel/core'
+import { declare }    from '@babel/helper-plugin-utils'
+
+import fs             from 'fs'
+import { dirname }    from 'path'
+import { join }       from 'path'
 
 const getPackageName = (filename, packagePath) => {
   try {
@@ -27,7 +29,6 @@ const templateLiteralVisitor = {
         const nodes = []
         let index = 0
 
-        // eslint-disable-next-line no-restricted-syntax
         for (const elem of path.node.quasis) {
           if (elem.value.cooked) {
             // @ts-ignore

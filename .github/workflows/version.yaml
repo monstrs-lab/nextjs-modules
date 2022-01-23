@@ -20,13 +20,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '16.4'
+          node-version: '16.13'
 
       - name: Install
         run: yarn install
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Version
-        run: yarn workspaces changed foreach --no-private --verbose version patch --deferred
+        run: yarn workspaces changed foreach --no-private --verbose run version patch --deferred
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 

@@ -1,6 +1,6 @@
+import sizeOf          from 'image-size'
 import loaderUtils     from 'next/dist/compiled/loader-utils'
 import { resizeImage } from 'next/dist/server/image-optimizer'
-import sizeOf          from 'image-size'
 
 const BLUR_IMG_SIZE = 8
 const BLUR_QUALITY = 70
@@ -44,8 +44,7 @@ function nextImageLoader(content) {
 
         const resizeImageSpan = imageLoaderSpan.traceChild('image-resize')
         const resizedImage = await resizeImageSpan.traceAsyncFn(() =>
-          resizeImage(content, dimension, BLUR_IMG_SIZE, extension, BLUR_QUALITY)
-        )
+          resizeImage(content, dimension, BLUR_IMG_SIZE, extension, BLUR_QUALITY))
         const blurDataURLSpan = imageLoaderSpan.traceChild('image-base64-tostring')
         blurDataURL = blurDataURLSpan.traceFn(
           () => `data:image/${extension};base64,${resizedImage.toString('base64')}`
@@ -59,8 +58,7 @@ function nextImageLoader(content) {
         height: imageSize.height,
         width: imageSize.width,
         blurDataURL,
-      })
-    )
+      }))
 
     if (!isServer) {
       this.emitFile(interpolatedName, content, null)
