@@ -5,7 +5,7 @@ __metadata:
   version: 5
   cacheKey: 8
 
-"@angular-devkit/core@npm:13.1.4, @angular-devkit/core@npm:^13.1.1, @angular-devkit/core@npm:^13.1.4":
+"@angular-devkit/core@npm:13.1.4, @angular-devkit/core@npm:^13.1.4":
   version: 13.1.4
   resolution: "@angular-devkit/core@npm:13.1.4"
   dependencies:
@@ -24,7 +24,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/schematics@npm:^13.1.1, @angular-devkit/schematics@npm:^13.1.4":
+"@angular-devkit/schematics@npm:^13.1.4":
   version: 13.1.4
   resolution: "@angular-devkit/schematics@npm:13.1.4"
   dependencies:
@@ -1273,28 +1273,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monstrs/schematics-utils@npm:0.1.9":
-  version: 0.1.9
-  resolution: "@monstrs/schematics-utils@npm:0.1.9"
+"@monstrs/schematics-utils@npm:0.1.11":
+  version: 0.1.11
+  resolution: "@monstrs/schematics-utils@npm:0.1.11"
   dependencies:
-    "@angular-devkit/core": ^13.1.1
-    "@angular-devkit/schematics": ^13.1.1
+    "@angular-devkit/core": ^13.1.4
+    "@angular-devkit/schematics": ^13.1.4
+    js-yaml: ^4.1.0
     semver: 6.3.0
     strip-json-comments: 3.0.1
-    yaml: 1.10.2
-  checksum: f811984e30525a06604bd073889fbc9cfe58ac75a092a405fc216c017ddecbe081cb5dd98cdbabf346ab4fc969b3cd044fecbdf8f0c731701278158319672da8
+  checksum: 6d4fc709b0391ff5710e1be3109ed3ad97847f4afdec8b7917543600bb69c700b123b7fc7524d1cdd0bc61f10d783ff6fe7ddc65c5f44298fac40611fb0fae79
   languageName: node
   linkType: hard
 
-"@monstrs/schematics@npm:^0.0.15":
-  version: 0.0.15
-  resolution: "@monstrs/schematics@npm:0.0.15"
+"@monstrs/schematics@npm:^0.0.19":
+  version: 0.0.19
+  resolution: "@monstrs/schematics@npm:0.0.19"
   dependencies:
     "@angular-devkit/core": ^13.1.4
     "@angular-devkit/schematics": ^13.1.4
     "@monstrs/config-typescript": 0.0.10
-    "@monstrs/schematics-utils": 0.1.9
-  checksum: 7aed01309fecd314a4d53642874a30e6f6420bf76ceadc5100ec0efb2869be6e5abdce2669d8341260b1d62171eebb2370145de447a0827bad7bb8c4a43e8bc2
+    "@monstrs/schematics-utils": 0.1.11
+  checksum: 3801570a64bd1b0e71fcedf5e6b045e3c7cae2f14ab83052f1af6a5fe4a33bb26b84e87732647cc25d19de6b6424e07d791bf305c299aadc019f47984e96682f
   languageName: node
   linkType: hard
 
@@ -5539,7 +5539,7 @@ __metadata:
   dependencies:
     "@jest/core": ^27.4.7
     "@monstrs/config-jest": ^0.0.10
-    "@monstrs/schematics": ^0.0.15
+    "@monstrs/schematics": ^0.0.19
     "@types/eslint": ^8
     "@types/jest": ^26.0.22
     "@types/node": ^14.14.41
@@ -7625,7 +7625,7 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"yaml@npm:1.10.2, yaml@npm:^1.7.2":
+"yaml@npm:^1.7.2":
   version: 1.10.2
   resolution: "yaml@npm:1.10.2"
   checksum: ce4ada136e8a78a0b08dc10b4b900936912d15de59905b2bf415b4d33c63df1d555d23acb2a41b23cf9fb5da41c256441afca3d6509de7247daa062fd2c5ea5f
