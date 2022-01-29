@@ -1,5 +1,4 @@
 {
-  "extends": "@monstrs/tsconfig/tsconfig.base.json",
   "include": ["packages/**/*"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
