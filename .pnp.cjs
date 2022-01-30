@@ -1263,6 +1263,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/identity-integration/",
           "packageDependencies": [
             ["@monstrs/next-identity-integration", "workspace:packages/identity-integration"],
+            ["@ory/integrations", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:0.2.1"],
             ["@ory/kratos-client", "npm:0.8.2-alpha.1"],
             ["@types/react", "npm:17.0.38"],
             ["@types/react-dom", "npm:17.0.11"],
@@ -1431,6 +1432,51 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-12.0.8-c0731d1639/node_modules/@next/swc-win32-x64-msvc/",
           "packageDependencies": [
             ["@next/swc-win32-x64-msvc", "npm:12.0.8"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@ory/client", [
+        ["npm:0.0.1-alpha.49", {
+          "packageLocation": "./.yarn/cache/@ory-client-npm-0.0.1-alpha.49-9232b80b83-e11c90bdcf.zip/node_modules/@ory/client/",
+          "packageDependencies": [
+            ["@ory/client", "npm:0.0.1-alpha.49"],
+            ["axios", "npm:0.21.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@ory/integrations", [
+        ["npm:0.2.1", {
+          "packageLocation": "./.yarn/cache/@ory-integrations-npm-0.2.1-75843f6d89-dd4662e074.zip/node_modules/@ory/integrations/",
+          "packageDependencies": [
+            ["@ory/integrations", "npm:0.2.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:0.2.1", {
+          "packageLocation": "./.yarn/__virtual__/@ory-integrations-virtual-0839306840/0/cache/@ory-integrations-npm-0.2.1-75843f6d89-dd4662e074.zip/node_modules/@ory/integrations/",
+          "packageDependencies": [
+            ["@ory/integrations", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:0.2.1"],
+            ["@ory/client", "npm:0.0.1-alpha.49"],
+            ["@ory/kratos-client", "npm:0.8.2-alpha.1"],
+            ["@types/next", null],
+            ["@types/ory__client", null],
+            ["@types/ory__kratos-client", null],
+            ["cookie", "npm:0.4.1"],
+            ["istextorbinary", "npm:6.0.0"],
+            ["next", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:12.0.8"],
+            ["ory-prettier-styles", "npm:1.1.2"],
+            ["prettier", "npm:2.5.1"],
+            ["request", "npm:2.88.2"],
+            ["set-cookie-parser", "npm:2.4.8"]
+          ],
+          "packagePeers": [
+            "@ory/kratos-client",
+            "@types/next",
+            "@types/ory__client",
+            "@types/ory__kratos-client",
+            "next"
           ],
           "linkType": "HARD",
         }]
@@ -2178,6 +2224,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["binaryextensions", [
+        ["npm:4.18.0", {
+          "packageLocation": "./.yarn/cache/binaryextensions-npm-4.18.0-af6f83841f-6fe92a9004.zip/node_modules/binaryextensions/",
+          "packageDependencies": [
+            ["binaryextensions", "npm:4.18.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["bl", [
         ["npm:4.1.0", {
           "packageLocation": "./.yarn/cache/bl-npm-4.1.0-7f94cdcf3f-9e8521fa7e.zip/node_modules/bl/",
@@ -2506,6 +2561,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["convert-source-map", "npm:1.7.0"],
             ["safe-buffer", "npm:5.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["cookie", [
+        ["npm:0.4.1", {
+          "packageLocation": "./.yarn/cache/cookie-npm-0.4.1-cc5e2ebb42-bd7c47f5d9.zip/node_modules/cookie/",
+          "packageDependencies": [
+            ["cookie", "npm:0.4.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3702,6 +3766,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["istanbul-reports", "npm:3.1.3"],
             ["html-escaper", "npm:2.0.2"],
             ["istanbul-lib-report", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["istextorbinary", [
+        ["npm:6.0.0", {
+          "packageLocation": "./.yarn/cache/istextorbinary-npm-6.0.0-601c96afac-7b9e159c7f.zip/node_modules/istextorbinary/",
+          "packageDependencies": [
+            ["istextorbinary", "npm:6.0.0"],
+            ["binaryextensions", "npm:4.18.0"],
+            ["textextensions", "npm:5.14.0"]
           ],
           "linkType": "HARD",
         }]
@@ -4933,6 +5008,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["ory-prettier-styles", [
+        ["npm:1.1.2", {
+          "packageLocation": "./.yarn/cache/ory-prettier-styles-npm-1.1.2-7439584a85-4cca6b6f6d.zip/node_modules/ory-prettier-styles/",
+          "packageDependencies": [
+            ["ory-prettier-styles", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["os-homedir", [
         ["npm:1.0.2", {
           "packageLocation": "./.yarn/cache/os-homedir-npm-1.0.2-01f82faa88-af609f5a7a.zip/node_modules/os-homedir/",
@@ -5106,6 +5190,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prelude-ls-npm-1.2.1-3e4d272a55-cd192ec0d0.zip/node_modules/prelude-ls/",
           "packageDependencies": [
             ["prelude-ls", "npm:1.2.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["prettier", [
+        ["npm:2.5.1", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.5.1-58b195b509-21b9408476.zip/node_modules/prettier/",
+          "packageDependencies": [
+            ["prettier", "npm:2.5.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5444,6 +5537,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/set-blocking-npm-2.0.0-49e2cffa24-6e65a05f7c.zip/node_modules/set-blocking/",
           "packageDependencies": [
             ["set-blocking", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["set-cookie-parser", [
+        ["npm:2.4.8", {
+          "packageLocation": "./.yarn/cache/set-cookie-parser-npm-2.4.8-3e04c5b17b-e15b5df9a5.zip/node_modules/set-cookie-parser/",
+          "packageDependencies": [
+            ["set-cookie-parser", "npm:2.4.8"]
           ],
           "linkType": "HARD",
         }]
@@ -5866,6 +5968,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/text-table-npm-0.2.0-d92a778b59-b6937a38c8.zip/node_modules/text-table/",
           "packageDependencies": [
             ["text-table", "npm:0.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["textextensions", [
+        ["npm:5.14.0", {
+          "packageLocation": "./.yarn/cache/textextensions-npm-5.14.0-5251a1bdcc-1f610ccf2a.zip/node_modules/textextensions/",
+          "packageDependencies": [
+            ["textextensions", "npm:5.14.0"]
           ],
           "linkType": "HARD",
         }]
