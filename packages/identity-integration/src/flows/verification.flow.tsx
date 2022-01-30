@@ -1,5 +1,7 @@
-import { SubmitSelfServiceRegistrationFlowBody } from '@ory/kratos-client'
-import { SelfServiceRegistrationFlow }           from '@ory/kratos-client'
+/* eslint-disable default-case */
+
+import { SubmitSelfServiceVerificationFlowBody } from '@ory/kratos-client'
+import { SelfServiceVerificationFlow }           from '@ory/kratos-client'
 
 import React                                     from 'react'
 import { AxiosError }                            from 'axios'
@@ -15,14 +17,13 @@ import { ValuesProvider }                        from '../providers'
 import { ValuesStore }                           from '../providers'
 import { SubmitProvider }                        from '../providers'
 import { kratos }                                from '../sdk'
-import { handleFlowError }                       from './handle-errors.util'
 
-export interface RegistrationFlowProps {
+export interface VerificationFlowProps {
   onError?: (error: { id: string }) => void
 }
 
-export const RegistrationFlow: FC<RegistrationFlowProps> = ({ children, onError }) => {
-  const [flow, setFlow] = useState<SelfServiceRegistrationFlow>()
+export const VerificationFlow: FC<VerificationFlowProps> = ({ children, onError }) => {
+  const [flow, setFlow] = useState<SelfServiceVerificationFlow>()
   const [submitting, setSubmitting] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(true)
   const values = useMemo(() => new ValuesStore(), [])
@@ -37,24 +38,39 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({ children, onError 
 
     if (flowId) {
       kratos
-        .getSelfServiceRegistrationFlow(String(flowId), undefined, { withCredentials: true })
+        .getSelfServiceVerificationFlow(String(flowId), undefined, { withCredentials: true })
         .then(({ data }) => {
           setFlow(data)
         })
-        .catch(handleFlowError(router, 'registration', setFlow, onError))
+        .catch((error: AxiosError) => {
+          switch (error.response?.status) {
+            case 410:
+            case 403:
+              return router.push('/auth/verification')
+          }
+
+          throw error
+        })
         .finally(() => setLoading(false))
 
       return
     }
 
     kratos
-      .initializeSelfServiceRegistrationFlowForBrowsers(returnTo ? String(returnTo) : undefined, {
+      .initializeSelfServiceVerificationFlowForBrowsers(returnTo ? String(returnTo) : undefined, {
         withCredentials: true,
       })
       .then(({ data }) => {
         setFlow(data)
       })
-      .catch(handleFlowError(router, 'registration', setFlow, onError))
+      .catch((error: AxiosError) => {
+        switch (error.response?.status) {
+          case 400:
+            return router.push('/')
+        }
+
+        throw error
+      })
       .finally(() => setLoading(false))
   }, [flowId, router, router.isReady, aal, refresh, returnTo, flow, onError])
 
@@ -68,31 +84,26 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({ children, onError 
     setSubmitting(true)
 
     kratos
-      .submitSelfServiceRegistrationFlow(
+      .submitSelfServiceVerificationFlow(
         String(flow?.id),
-        values.getValues() as SubmitSelfServiceRegistrationFlowBody,
+        undefined,
+        values.getValues() as SubmitSelfServiceVerificationFlowBody,
         { withCredentials: true }
       )
-      .then(() => {
-        if (flow?.return_to) {
-          window.location.href = flow?.return_to
-        } else {
-          router.push('/profile/settings')
-        }
+      .then(({ data }) => {
+        setFlow(data)
       })
-      .catch(handleFlowError(router, 'registration', setFlow))
       .catch((error: AxiosError) => {
-        if (error.response?.status === 400) {
-          setFlow(error.response?.data)
-
-          return
+        switch (error.response?.status) {
+          case 400:
+            setFlow(error.response?.data)
+            return
         }
 
-        // eslint-disable-next-line consistent-return
-        return Promise.reject(error)
+        throw error
       })
       .finally(() => setSubmitting(false))
-  }, [router, flow, values, setSubmitting])
+  }, [flow, values, setSubmitting])
 
   return (
     <FlowProvider value={{ flow, loading }}>
