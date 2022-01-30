@@ -64,29 +64,33 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }) => {
     }
   }, [values, flow])
 
-  const onSubmit = useCallback(() => {
-    setSubmitting(true)
+  const onSubmit = useCallback(
+    (method?: string) => {
+      setSubmitting(true)
 
-    kratos
-      .submitSelfServiceSettingsFlow(
-        String(flow?.id),
-        undefined,
-        values.getValues() as SubmitSelfServiceSettingsFlowBody,
-        { withCredentials: true }
-      )
-      .catch(handleFlowError(router, 'settings', setFlow))
-      .catch((error: AxiosError) => {
-        if (error.response?.status === 400) {
-          setFlow(error.response?.data)
+      const body = values.getValues() as SubmitSelfServiceSettingsFlowBody
 
-          return
-        }
+      if (method) {
+        body.method = method
+      }
 
-        // eslint-disable-next-line consistent-return
-        return Promise.reject(error)
-      })
-      .finally(() => setSubmitting(false))
-  }, [router, flow, values, setSubmitting])
+      kratos
+        .submitSelfServiceSettingsFlow(String(flow?.id), undefined, body, { withCredentials: true })
+        .catch(handleFlowError(router, 'settings', setFlow))
+        .catch((error: AxiosError) => {
+          if (error.response?.status === 400) {
+            setFlow(error.response?.data)
+
+            return
+          }
+
+          // eslint-disable-next-line consistent-return
+          return Promise.reject(error)
+        })
+        .finally(() => setSubmitting(false))
+    },
+    [router, flow, values, setSubmitting]
+  )
 
   return (
     <FlowProvider value={{ flow, loading }}>
