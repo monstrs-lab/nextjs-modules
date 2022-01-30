@@ -1,7 +1,7 @@
 import { createContext } from 'react'
 
 export interface ContextSubmit {
-  onSubmit: () => void
+  onSubmit: (method?: string) => void
   submitting: boolean
 }
 
