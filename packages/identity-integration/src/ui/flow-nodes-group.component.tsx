@@ -1,38 +1,24 @@
-import type { UiNodeInputAttributes } from '@ory/kratos-client'
-import type { UiNodeImageAttributes } from '@ory/kratos-client'
+import type { UiNode }  from '@ory/kratos-client'
 
-import { UiNode }                     from '@ory/kratos-client'
+import { ReactElement } from 'react'
+import { FC }           from 'react'
+import { useMemo }      from 'react'
 
-import { ReactElement }               from 'react'
-import { FC }                         from 'react'
-import { useMemo }                    from 'react'
-
-import { useFlow }                    from '../providers'
+import { useFlow }      from '../providers'
 
 export type FlowNodesGroupChildren = (node: Array<UiNode>) => ReactElement<any>
 
 export interface FlowNodesGroupProps {
-  nameOrId: string
+  group: string
   children: ReactElement<any> | FlowNodesGroupChildren
 }
 
-export const FlowNodesGroup: FC<FlowNodesGroupProps> = ({ nameOrId, children }) => {
+export const FlowNodesGroup: FC<FlowNodesGroupProps> = ({ group, children }) => {
   const { flow } = useFlow()
 
   const nodes = useMemo(
-    () =>
-      flow?.ui?.nodes?.filter(({ attributes }) => {
-        if ((attributes as UiNodeInputAttributes).name) {
-          return (attributes as UiNodeInputAttributes).name === nameOrId
-        }
-
-        if ((attributes as UiNodeImageAttributes).id) {
-          return (attributes as UiNodeImageAttributes).id === nameOrId
-        }
-
-        return false
-      }),
-    [flow, nameOrId]
+    () => flow?.ui?.nodes?.filter((node) => node.group === group),
+    [flow, group]
   )
 
   if (!(nodes && nodes.length > 0)) {
