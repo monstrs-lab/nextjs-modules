@@ -15,7 +15,7 @@ export const LogoutFlow = ({ children }) => {
     }
 
     kratos
-      .createSelfServiceLogoutFlowUrlForBrowsers()
+      .createSelfServiceLogoutFlowUrlForBrowsers(undefined, { withCredentials: true })
       .then(({ data }) => {
         setLogoutToken(data.logout_token)
       })
@@ -34,7 +34,7 @@ export const LogoutFlow = ({ children }) => {
   useEffect(() => {
     if (logoutToken) {
       kratos
-        .submitSelfServiceLogoutFlow(logoutToken)
+        .submitSelfServiceLogoutFlow(logoutToken, undefined, { withCredentials: true })
         .then(() => router.push('/auth/login'))
         .then(() => router.reload())
     }
