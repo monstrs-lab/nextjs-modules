@@ -83,8 +83,7 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({ children, onError 
           if (flow?.return_to) {
             window.location.href = flow?.return_to
           } else {
-            router.push('/profile/settings')
-            router.reload()
+            router.push('/profile/settings').then(() => router.reload())
           }
         })
         .catch(handleFlowError(router, 'registration', setFlow))
