@@ -70,11 +70,11 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({ children, onError 
       setSubmitting(true)
 
       const [submitNode] = [
-        flow?.ui.nodes.find(
+        flow?.ui.nodes.filter(
           ({ attributes, group }) =>
             group === 'password' && (attributes as UiNodeInputAttributes).type === 'submit'
         ),
-        flow?.ui.nodes.find(
+        flow?.ui.nodes.filter(
           ({ attributes }) => (attributes as UiNodeInputAttributes).type === 'submit'
         ),
       ].flat()
