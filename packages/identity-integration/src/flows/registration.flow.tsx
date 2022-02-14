@@ -77,7 +77,7 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({ children, onError 
         flow?.ui.nodes.find(
           ({ attributes }) => (attributes as UiNodeInputAttributes).type === 'submit'
         ),
-      ]
+      ].flat()
 
       const body = {
         ...(values.getValues() as SubmitSelfServiceRegistrationFlowBody),
