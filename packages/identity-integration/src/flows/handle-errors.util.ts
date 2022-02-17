@@ -38,7 +38,7 @@ export const handleFlowError = <S>(
 
         onResetFlow(undefined)
 
-        await router.push('/auth/' + flowType)
+        await router.push(flowType === 'settings' ? '/profile/settings' : '/auth/' + flowType)
 
         return
       case 'self_service_flow_expired':
@@ -48,7 +48,7 @@ export const handleFlowError = <S>(
 
         onResetFlow(undefined)
 
-        await router.push('/auth/' + flowType)
+        await router.push(flowType === 'settings' ? '/profile/settings' : '/auth/' + flowType)
 
         return
       case 'security_csrf_violation':
@@ -58,13 +58,13 @@ export const handleFlowError = <S>(
 
         onResetFlow(undefined)
 
-        await router.push('/auth/' + flowType)
+        await router.push(flowType === 'settings' ? '/profile/settings' : '/auth/' + flowType)
 
         return
       case 'security_identity_mismatch':
         onResetFlow(undefined)
 
-        await router.push('/auth/' + flowType)
+        await router.push(flowType === 'settings' ? '/profile/settings' : '/auth/' + flowType)
 
         return
       case 'browser_location_change_required':
@@ -77,7 +77,7 @@ export const handleFlowError = <S>(
       case 410:
         onResetFlow(undefined)
 
-        await router.push('/auth/' + flowType)
+        await router.push(flowType === 'settings' ? '/profile/settings' : '/auth/' + flowType)
 
         return
     }

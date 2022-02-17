@@ -75,6 +75,9 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }) => {
 
       kratos
         .submitSelfServiceSettingsFlow(String(flow?.id), undefined, body, { withCredentials: true })
+        .then(({ data }) => {
+          setFlow(data)
+        })
         .catch(handleFlowError(router, 'settings', setFlow))
         .catch((error: AxiosError) => {
           if (error.response?.status === 400) {
