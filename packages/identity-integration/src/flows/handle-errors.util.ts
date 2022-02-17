@@ -20,7 +20,11 @@ export const handleFlowError = <S>(
 
         return
       case 'session_already_available':
-        await router.push('/auth/')
+        if (error.response?.data?.redirect_browser_to) {
+          window.location.href = error.response.data.redirect_browser_to
+        } else {
+          await router.push('/profile/settings')
+        }
 
         return
       case 'session_refresh_required':
