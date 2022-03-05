@@ -1270,7 +1270,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["axios", "npm:0.25.0"],
             ["next", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:12.0.8"],
             ["react", "npm:17.0.2"],
-            ["react-dom", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:17.0.2"]
+            ["react-dom", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:17.0.2"],
+            ["tldjs", "npm:2.3.1"]
           ],
           "linkType": "SOFT",
         }]
@@ -5234,6 +5235,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["punycode", [
+        ["npm:1.4.1", {
+          "packageLocation": "./.yarn/cache/punycode-npm-1.4.1-be4c23e6d2-fa6e698cb5.zip/node_modules/punycode/",
+          "packageDependencies": [
+            ["punycode", "npm:1.4.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.1.1", {
           "packageLocation": "./.yarn/cache/punycode-npm-2.1.1-26eb3e15cf-823bf443c6.zip/node_modules/punycode/",
           "packageDependencies": [
@@ -5986,6 +5994,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/throat-npm-6.0.1-1308a37a10-782d4171ee.zip/node_modules/throat/",
           "packageDependencies": [
             ["throat", "npm:6.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["tldjs", [
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/unplugged/tldjs-npm-2.3.1-25e51f3b87/node_modules/tldjs/",
+          "packageDependencies": [
+            ["tldjs", "npm:2.3.1"],
+            ["punycode", "npm:1.4.1"]
           ],
           "linkType": "HARD",
         }]

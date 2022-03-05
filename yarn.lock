@@ -786,6 +786,7 @@ __metadata:
     next: ^12.0.9
     react: ^17.0.2
     react-dom: ^17.0.2
+    tldjs: ^2.3.1
   peerDependencies:
     next: ^12.0.9
     react: ^17.0.1
@@ -4202,6 +4203,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"punycode@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "punycode@npm:1.4.1"
+  checksum: fa6e698cb53db45e4628559e557ddaf554103d2a96a1d62892c8f4032cd3bc8871796cae9eabc1bc700e2b6677611521ce5bb1d9a27700086039965d0cf34518
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0, punycode@npm:^2.1.1":
   version: 2.1.1
   resolution: "punycode@npm:2.1.1"
@@ -4870,6 +4878,15 @@ resolve@^1.20.0:
   version: 6.0.1
   resolution: "throat@npm:6.0.1"
   checksum: 782d4171ee4e3cf947483ed2ff1af3e17cc4354c693b9d339284f61f99fbc401d171e0b0d2db3295bb7d447630333e9319c174ebd7ef315c6fb791db9675369c
+  languageName: node
+  linkType: hard
+
+"tldjs@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "tldjs@npm:2.3.1"
+  dependencies:
+    punycode: ^1.4.1
+  checksum: f699c6a6aa29b0f0ed1297f3a8c692dd9403139d2e5c5381490c69e9e447e499dd8caaa2b228af30ecc8591b45af51344d2b39d99af2d29fcee964e8093428de
   languageName: node
   linkType: hard
 
