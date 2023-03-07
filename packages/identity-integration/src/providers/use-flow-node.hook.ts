@@ -1,6 +1,6 @@
-import type { UiNodeInputAttributes } from '@ory/kratos-client'
-import type { UiNodeImageAttributes } from '@ory/kratos-client'
-import type { UiNode }                from '@ory/kratos-client'
+import type { UiNodeInputAttributes } from '@ory/client'
+import type { UiNodeImageAttributes } from '@ory/client'
+import type { UiNode }                from '@ory/client'
 
 import { useMemo }                    from 'react'
 
