@@ -5,6 +5,7 @@ import { UiNodeInputAttributes }                 from '@ory/kratos-client'
 import React                                     from 'react'
 import { AxiosError }                            from 'axios'
 import { FC }                                    from 'react'
+import { ReactNode }                             from 'react'
 import { useRouter }                             from 'next/router'
 import { useState }                              from 'react'
 import { useEffect }                             from 'react'
@@ -19,6 +20,7 @@ import { kratos }                                from '../sdk'
 import { handleFlowError }                       from './handle-errors.util'
 
 export interface RegistrationFlowProps {
+  children: ReactNode
   onError?: (error: { id: string }) => void
 }
 

@@ -3,6 +3,7 @@ import { SelfServiceError } from '@ory/kratos-client'
 import React                from 'react'
 import { AxiosError }       from 'axios'
 import { FC }               from 'react'
+import { ReactNode }        from 'react'
 import { useRouter }        from 'next/router'
 import { useState }         from 'react'
 import { useEffect }        from 'react'
@@ -10,7 +11,9 @@ import { useEffect }        from 'react'
 import { ErrorProvider }    from '../providers'
 import { kratos }           from '../sdk'
 
-export interface ErrorErrorProps {}
+export interface ErrorErrorProps {
+  children: ReactNode
+}
 
 export const ErrorFlow: FC<ErrorErrorProps> = ({ children }) => {
   const [error, setError] = useState<SelfServiceError>()

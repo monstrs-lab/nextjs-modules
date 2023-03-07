@@ -5,6 +5,7 @@ import { SelfServiceVerificationFlow }           from '@ory/kratos-client'
 
 import React                                     from 'react'
 import { AxiosError }                            from 'axios'
+import { ReactNode }                             from 'react'
 import { FC }                                    from 'react'
 import { useRouter }                             from 'next/router'
 import { useState }                              from 'react'
@@ -19,6 +20,7 @@ import { SubmitProvider }                        from '../providers'
 import { kratos }                                from '../sdk'
 
 export interface VerificationFlowProps {
+  children: ReactNode
   onError?: (error: { id: string }) => void
 }
 
