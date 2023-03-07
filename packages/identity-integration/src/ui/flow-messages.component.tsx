@@ -1,4 +1,4 @@
-import { UiText }       from '@ory/kratos-client'
+import { UiText }       from '@ory/client'
 
 import { ReactElement } from 'react'
 import { FC }           from 'react'

@@ -1,13 +1,13 @@
-import type { SelfServiceRegistrationFlow }           from '@ory/kratos-client'
-import type { SelfServiceVerificationFlow }           from '@ory/kratos-client'
-import type { SelfServiceRecoveryFlow }               from '@ory/kratos-client'
-import type { SelfServiceSettingsFlow }               from '@ory/kratos-client'
-import type { SelfServiceLoginFlow }                  from '@ory/kratos-client'
-import type { SubmitSelfServiceRegistrationFlowBody } from '@ory/kratos-client'
-import type { SubmitSelfServiceVerificationFlowBody } from '@ory/kratos-client'
-import type { SubmitSelfServiceRecoveryFlowBody }     from '@ory/kratos-client'
-import type { SubmitSelfServiceSettingsFlowBody }     from '@ory/kratos-client'
-import type { SubmitSelfServiceLoginFlowBody }        from '@ory/kratos-client'
+import type { RegistrationFlow }           from '@ory/client'
+import type { VerificationFlow }           from '@ory/client'
+import type { RecoveryFlow }               from '@ory/client'
+import type { SettingsFlow }               from '@ory/client'
+import type { LoginFlow }                  from '@ory/client'
+import type { UpdateRegistrationFlowBody } from '@ory/client'
+import type { UpdateVerificationFlowBody } from '@ory/client'
+import type { UpdateRecoveryFlowBody }     from '@ory/client'
+import type { UpdateSettingsFlowBody }     from '@ory/client'
+import type { UpdateLoginFlowBody }        from '@ory/client'
 
 export type FlowName =
   | 'login'
@@ -17,16 +17,11 @@ export type FlowName =
   | 'verification'
   | 'errors'
 
-export type Flow =
-  | SelfServiceRegistrationFlow
-  | SelfServiceVerificationFlow
-  | SelfServiceRecoveryFlow
-  | SelfServiceSettingsFlow
-  | SelfServiceLoginFlow
+export type Flow = RegistrationFlow | VerificationFlow | RecoveryFlow | SettingsFlow | LoginFlow
 
 export type Body =
-  | SubmitSelfServiceRegistrationFlowBody
-  | SubmitSelfServiceVerificationFlowBody
-  | SubmitSelfServiceRecoveryFlowBody
-  | SubmitSelfServiceSettingsFlowBody
-  | SubmitSelfServiceLoginFlowBody
+  | UpdateRegistrationFlowBody
+  | UpdateVerificationFlowBody
+  | UpdateRecoveryFlowBody
+  | UpdateSettingsFlowBody
+  | UpdateLoginFlowBody

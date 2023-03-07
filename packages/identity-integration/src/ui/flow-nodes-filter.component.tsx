@@ -1,4 +1,4 @@
-import type { UiNode }  from '@ory/kratos-client'
+import type { UiNode }  from '@ory/client'
 
 import { ReactElement } from 'react'
 import { FC }           from 'react'

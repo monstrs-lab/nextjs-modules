@@ -1366,8 +1366,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/identity-integration/",\
           "packageDependencies": [\
             ["@monstrs/next-identity-integration", "workspace:packages/identity-integration"],\
-            ["@ory/integrations", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:0.2.1"],\
-            ["@ory/kratos-client", "npm:0.8.2-alpha.1"],\
+            ["@ory/client", "npm:1.1.21"],\
+            ["@ory/integrations", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:1.1.0"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
             ["axios", "npm:0.25.0"],\
@@ -1564,56 +1564,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ory/client", [\
-        ["npm:0.0.1-alpha.49", {\
-          "packageLocation": "./.yarn/cache/@ory-client-npm-0.0.1-alpha.49-9232b80b83-e11c90bdcf.zip/node_modules/@ory/client/",\
+        ["npm:1.1.21", {\
+          "packageLocation": "./.yarn/unplugged/@ory-client-npm-1.1.21-c40204e8a2/node_modules/@ory/client/",\
           "packageDependencies": [\
-            ["@ory/client", "npm:0.0.1-alpha.49"],\
+            ["@ory/client", "npm:1.1.21"],\
             ["axios", "npm:0.21.4"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@ory/integrations", [\
-        ["npm:0.2.1", {\
-          "packageLocation": "./.yarn/cache/@ory-integrations-npm-0.2.1-75843f6d89-dd4662e074.zip/node_modules/@ory/integrations/",\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/@ory-integrations-npm-1.1.0-66d4cf5b19-38e38fad8e.zip/node_modules/@ory/integrations/",\
           "packageDependencies": [\
-            ["@ory/integrations", "npm:0.2.1"]\
+            ["@ory/integrations", "npm:1.1.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:0.2.1", {\
-          "packageLocation": "./.yarn/__virtual__/@ory-integrations-virtual-0839306840/0/cache/@ory-integrations-npm-0.2.1-75843f6d89-dd4662e074.zip/node_modules/@ory/integrations/",\
+        ["virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:1.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@ory-integrations-virtual-5ffeba3d39/0/cache/@ory-integrations-npm-1.1.0-66d4cf5b19-38e38fad8e.zip/node_modules/@ory/integrations/",\
           "packageDependencies": [\
-            ["@ory/integrations", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:0.2.1"],\
-            ["@ory/client", "npm:0.0.1-alpha.49"],\
-            ["@ory/kratos-client", "npm:0.8.2-alpha.1"],\
+            ["@ory/integrations", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:1.1.0"],\
+            ["@ory/client", "npm:1.1.21"],\
             ["@types/next", null],\
             ["@types/ory__client", null],\
-            ["@types/ory__kratos-client", null],\
+            ["@types/tldjs", "npm:2.3.1"],\
             ["cookie", "npm:0.4.1"],\
             ["istextorbinary", "npm:6.0.0"],\
             ["next", "virtual:9cfb9926d2252e74e06bf5566090d8eb5d4b42a710c0641fd5021a2123f07d045d52c98c594a91950dd4338f3ad8f1f558d22d63574f76582d968928fbfd8384#npm:13.2.3"],\
-            ["ory-prettier-styles", "npm:1.1.2"],\
+            ["ory-prettier-styles", "npm:1.3.0"],\
             ["prettier", "npm:2.5.1"],\
             ["request", "npm:2.88.2"],\
-            ["set-cookie-parser", "npm:2.4.8"]\
+            ["set-cookie-parser", "npm:2.4.8"],\
+            ["tldjs", "npm:2.3.1"]\
           ],\
           "packagePeers": [\
-            "@ory/kratos-client",\
+            "@ory/client",\
             "@types/next",\
             "@types/ory__client",\
-            "@types/ory__kratos-client",\
             "next"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@ory/kratos-client", [\
-        ["npm:0.8.2-alpha.1", {\
-          "packageLocation": "./.yarn/cache/@ory-kratos-client-npm-0.8.2-alpha.1-8d2a5db47c-d103ffdf08.zip/node_modules/@ory/kratos-client/",\
-          "packageDependencies": [\
-            ["@ory/kratos-client", "npm:0.8.2-alpha.1"],\
-            ["axios", "npm:0.21.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1853,6 +1842,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-stack-utils-npm-2.0.0-8ded8461bc-b3fbae25b0.zip/node_modules/@types/stack-utils/",\
           "packageDependencies": [\
             ["@types/stack-utils", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/tldjs", [\
+        ["npm:2.3.1", {\
+          "packageLocation": "./.yarn/cache/@types-tldjs-npm-2.3.1-5df0bfec5c-3b796de8c4.zip/node_modules/@types/tldjs/",\
+          "packageDependencies": [\
+            ["@types/tldjs", "npm:2.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4847,10 +4845,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ory-prettier-styles", [\
-        ["npm:1.1.2", {\
-          "packageLocation": "./.yarn/cache/ory-prettier-styles-npm-1.1.2-7439584a85-4cca6b6f6d.zip/node_modules/ory-prettier-styles/",\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/ory-prettier-styles-npm-1.3.0-a4b6a1fa63-95398258a4.zip/node_modules/ory-prettier-styles/",\
           "packageDependencies": [\
-            ["ory-prettier-styles", "npm:1.1.2"]\
+            ["ory-prettier-styles", "npm:1.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\

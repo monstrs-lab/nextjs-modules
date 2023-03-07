@@ -1,22 +1,22 @@
-import { SelfServiceError } from '@ory/kratos-client'
+import type { FlowError } from '@ory/client'
 
-import React                from 'react'
-import { AxiosError }       from 'axios'
-import { FC }               from 'react'
-import { ReactNode }        from 'react'
-import { useRouter }        from 'next/router'
-import { useState }         from 'react'
-import { useEffect }        from 'react'
+import React              from 'react'
+import { AxiosError }     from 'axios'
+import { FC }             from 'react'
+import { ReactNode }      from 'react'
+import { useRouter }      from 'next/router'
+import { useState }       from 'react'
+import { useEffect }      from 'react'
 
-import { ErrorProvider }    from '../providers'
-import { kratos }           from '../sdk'
+import { ErrorProvider }  from '../providers'
+import { kratos }         from '../sdk'
 
 export interface ErrorErrorProps {
   children: ReactNode
 }
 
 export const ErrorFlow: FC<ErrorErrorProps> = ({ children }) => {
-  const [error, setError] = useState<SelfServiceError>()
+  const [error, setError] = useState<FlowError>()
   const [loading, setLoading] = useState<boolean>(true)
   const router = useRouter()
 
@@ -28,7 +28,7 @@ export const ErrorFlow: FC<ErrorErrorProps> = ({ children }) => {
     }
 
     kratos
-      .getSelfServiceError(String(id))
+      .getFlowError({ id: String(id) })
       .then(({ data }) => {
         setError(data)
       })

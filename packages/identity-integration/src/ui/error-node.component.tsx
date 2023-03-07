@@ -1,12 +1,12 @@
-import type { SelfServiceError } from '@ory/kratos-client'
+import type { FlowError } from '@ory/client'
 
-import { ReactElement }          from 'react'
-import { FC }                    from 'react'
+import { ReactElement }   from 'react'
+import { FC }             from 'react'
 
-import { useError }              from '../providers'
+import { useError }       from '../providers'
 
 export interface ErrorNodeProps {
-  children: (node: SelfServiceError) => ReactElement<any>
+  children: (node: FlowError) => ReactElement<any>
 }
 
 export const ErrorNode: FC<ErrorNodeProps> = ({ children }) => {

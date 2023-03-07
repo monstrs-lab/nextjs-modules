@@ -19,6 +19,11 @@
     "husky": "7.0.4",
     "typescript": "4.9.5"
   },
+  "dependenciesMeta": {
+    "@ory/client@1.1.21": {
+      "unplugged": true
+    }
+  },
   "packageManager": "yarn@3.4.1",
   "tools": {
     "schematic": {

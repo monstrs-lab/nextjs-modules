@@ -1,9 +1,9 @@
-import { SelfServiceError } from '@ory/kratos-client'
+import type { FlowError } from '@ory/client'
 
-import { createContext }    from 'react'
+import { createContext }  from 'react'
 
 export interface ContextError {
-  error?: SelfServiceError
+  error?: FlowError
   loading: boolean
 }
 
