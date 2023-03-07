@@ -10,8 +10,8 @@
   },
   "devDependencies": {
     "@jest/core": "^29.5.0",
-    "@monstrs/config-jest": "^0.0.10",
-    "@monstrs/schematics": "^0.0.19",
+    "@monstrs/config-jest": "^0.0.13",
+    "@monstrs/schematics": "^0.0.23",
     "@types/eslint": "^8.21.1",
     "@types/jest": "^29.4.0",
     "@types/node": "^18.14.6",
