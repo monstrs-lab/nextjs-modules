@@ -1,13 +1,21 @@
-import { ReactElement }     from 'react'
-import { FC }               from 'react'
-import { FormEvent }        from 'react'
-import { useCallback }      from 'react'
+import type { UiNodeInputAttributes } from '@ory/client'
+import type { UiNode }                from '@ory/client'
 
-import { FlowUiInputNode }  from '../providers'
-import { useFlowInputNode } from '../providers'
-import { useValue }         from '../providers'
+import { UiNodeTypeEnum }             from '@ory/client'
+
+import { ReactElement }               from 'react'
+import { FC }                         from 'react'
+import { FormEvent }                  from 'react'
+import { useCallback }                from 'react'
+
+import { useFlowNode }                from '../providers'
+import { useValue }                   from '../providers'
 
 type OnChangeCallback = (event: FormEvent<HTMLInputElement> | string | any) => void
+
+export interface FlowUiInputNode extends UiNode {
+  attributes: UiNodeInputAttributes
+}
 
 export interface FlowInputNodeProps {
   name: string
@@ -19,7 +27,7 @@ export interface FlowInputNodeProps {
 }
 
 export const FlowInputNode: FC<FlowInputNodeProps> = ({ name, children }) => {
-  const node = useFlowInputNode(name)
+  const node = useFlowNode(name)
   const [value, setValue] = useValue(name)
 
   const onChange = useCallback(
@@ -33,8 +41,8 @@ export const FlowInputNode: FC<FlowInputNodeProps> = ({ name, children }) => {
     [setValue]
   )
 
-  if (node && typeof children === 'function') {
-    return children(node, value, onChange)
+  if (node && node.type === UiNodeTypeEnum.Input && typeof children === 'function') {
+    return children(node as FlowUiInputNode, value, onChange)
   }
 
   return null
