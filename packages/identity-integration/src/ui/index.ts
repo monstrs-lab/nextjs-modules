@@ -1,3 +1,4 @@
+export * from './flow-input-node.component'
 export * from './flow-node-messages.component'
 export * from './flow-nodes-filter.component'
 export * from './flow-nodes-group.component'
