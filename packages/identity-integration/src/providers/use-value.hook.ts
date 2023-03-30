@@ -4,10 +4,10 @@ import { useCallback } from 'react'
 
 import { useValues }   from './use-values.hook'
 
-export const useValue = (name: string, defaultValue?: string) => {
+export const useValue = (name: string) => {
   const values = useValues()
 
-  const [value, setValue] = useState(values.getValue(name) || defaultValue)
+  const [value, setValue] = useState(values.getValue(name))
 
   useEffect(() => {
     values.on(name, setValue)
