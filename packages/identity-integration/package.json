@@ -1,6 +1,6 @@
 {
   "name": "@monstrs/next-identity-integration",
-  "version": "0.0.36",
+  "version": "0.0.37",
   "license": "MIT",
   "main": "src/index.ts",
   "files": [
