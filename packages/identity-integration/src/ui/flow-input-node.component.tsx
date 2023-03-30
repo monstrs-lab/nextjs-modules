@@ -19,6 +19,7 @@ export interface FlowUiInputNode extends UiNode {
 
 export interface FlowInputNodeProps {
   name: string
+  defaultValue?: string
   children: (
     node: FlowUiInputNode,
     value: string | any,
@@ -26,9 +27,9 @@ export interface FlowInputNodeProps {
   ) => ReactElement<any>
 }
 
-export const FlowInputNode: FC<FlowInputNodeProps> = ({ name, children }) => {
+export const FlowInputNode: FC<FlowInputNodeProps> = ({ name, defaultValue, children }) => {
   const node = useFlowNode(name)
-  const [value, setValue] = useValue(name)
+  const [value, setValue] = useValue(name, defaultValue)
 
   const onChange = useCallback(
     (event: FormEvent<HTMLInputElement> | string | any) => {
