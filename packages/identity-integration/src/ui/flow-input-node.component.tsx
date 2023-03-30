@@ -4,6 +4,7 @@ import type { UiNode }                from '@ory/client'
 import { UiNodeTypeEnum }             from '@ory/client'
 
 import { ReactElement }               from 'react'
+import { useEffect }    from 'react'
 import { FC }                         from 'react'
 import { FormEvent }                  from 'react'
 import { useCallback }                from 'react'
@@ -29,7 +30,13 @@ export interface FlowInputNodeProps {
 
 export const FlowInputNode: FC<FlowInputNodeProps> = ({ name, defaultValue, children }) => {
   const node = useFlowNode(name)
-  const [value, setValue] = useValue(name, defaultValue)
+  const [value, setValue] = useValue(name)
+
+  useEffect(() => {
+    if (!value && defaultValue) {
+      setValue(defaultValue)
+    }
+  })
 
   const onChange = useCallback(
     (event: FormEvent<HTMLInputElement> | string | any) => {
