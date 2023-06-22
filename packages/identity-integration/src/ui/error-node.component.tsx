@@ -1,12 +1,11 @@
-import type { FlowError } from '@ory/client'
+import type { FlowError }    from '@ory/client'
+import type { ReactElement } from 'react'
+import type { FC }           from 'react'
 
-import { ReactElement }   from 'react'
-import { FC }             from 'react'
-
-import { useError }       from '../providers'
+import { useError }          from '../providers'
 
 export interface ErrorNodeProps {
-  children: (node: FlowError) => ReactElement<any>
+  children: (node: FlowError) => ReactElement
 }
 
 export const ErrorNode: FC<ErrorNodeProps> = ({ children }) => {

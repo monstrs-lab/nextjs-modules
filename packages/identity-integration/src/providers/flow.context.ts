@@ -1,6 +1,6 @@
-import { createContext } from 'react'
+import type { Flow }     from './flow.interfaces'
 
-import { Flow }          from './flow.interfaces'
+import { createContext } from 'react'
 
 export interface ContextFlow {
   flow?: Flow

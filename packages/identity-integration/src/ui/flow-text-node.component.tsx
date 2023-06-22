@@ -1,10 +1,9 @@
 import type { UiNodeTextAttributes } from '@ory/client'
 import type { UiNode }               from '@ory/client'
+import type { ReactElement }         from 'react'
+import type { FC }                   from 'react'
 
 import { UiNodeTypeEnum }            from '@ory/client'
-
-import { ReactElement }              from 'react'
-import { FC }                        from 'react'
 
 import { useFlowNode }               from '../providers'
 
@@ -14,7 +13,7 @@ export interface FlowUiTextNode extends UiNode {
 
 export interface FlowTextNodeProps {
   name: string
-  children: (node: FlowUiTextNode) => ReactElement<any>
+  children: (node: FlowUiTextNode) => ReactElement
 }
 
 export const FlowTextNode: FC<FlowTextNodeProps> = ({ name, children }) => {

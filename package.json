@@ -8,23 +8,16 @@
     "@types/estree": "1.0.0"
   },
   "devDependencies": {
-    "@jest/core": "^29.5.0",
-    "@monstrs/config-jest": "^0.0.13",
-    "@monstrs/schematics": "^0.0.23",
-    "@types/eslint": "^8.21.1",
-    "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.6",
-    "@types/react": "^18.0.28",
-    "eslint": "^8.35.0",
-    "husky": "7.0.4",
-    "typescript": "4.9.5"
+    "@monstrs/tools-runtime": "^0.2.10",
+    "@types/node": "^20.3.1",
+    "typescript": "^5.1.3"
   },
   "dependenciesMeta": {
     "@ory/client@1.1.21": {
       "unplugged": true
     }
   },
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.6.0",
   "tools": {
     "schematic": {
       "collection": "@monstrs/schematics",

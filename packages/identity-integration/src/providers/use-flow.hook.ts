@@ -1,7 +1,8 @@
-import { useContext }  from 'react'
+import type { ContextFlow } from './flow.context'
 
-import { FlowContext } from './flow.context'
-import { ContextFlow } from './flow.context'
+import { useContext }       from 'react'
+
+import { FlowContext }      from './flow.context'
 
 export const useFlow = (): ContextFlow => {
   const flow = useContext(FlowContext)

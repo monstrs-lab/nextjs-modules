@@ -1,13 +1,13 @@
-import { UiText }       from '@ory/client'
+import type { UiText }       from '@ory/client'
+import type { ReactElement } from 'react'
+import type { FC }           from 'react'
 
-import { ReactElement } from 'react'
-import { FC }           from 'react'
-import { useMemo }      from 'react'
+import { useMemo }           from 'react'
 
-import { useFlow }      from '../providers'
+import { useFlow }           from '../providers'
 
 export interface FlowMessagesProps {
-  children: (messages: Array<UiText>) => ReactElement<any>
+  children: (messages: Array<UiText>) => ReactElement
 }
 
 export const FlowMessages: FC<FlowMessagesProps> = ({ children }) => {

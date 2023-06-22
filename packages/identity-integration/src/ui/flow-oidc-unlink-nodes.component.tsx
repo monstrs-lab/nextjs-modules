@@ -1,14 +1,15 @@
 import type { UiNodeInputAttributes } from '@ory/client'
+import type { ReactElement }          from 'react'
+import type { FC }                    from 'react'
 
-import { ReactElement }               from 'react'
-import { FC }                         from 'react'
+import type { FlowUiInputNode }       from './flow-input-node.component'
+
 import { useMemo }                    from 'react'
 
-import { FlowUiInputNode }            from './flow-input-node.component'
 import { useFlow }                    from '../providers'
 
 export interface FlowOidcUnlinkNodesProps {
-  children: (nodes: Array<FlowUiInputNode>) => ReactElement<any>
+  children: (nodes: Array<FlowUiInputNode>) => ReactElement
 }
 
 export const FlowOidcUnlinkNodes: FC<FlowOidcUnlinkNodesProps> = ({ children }) => {
@@ -31,5 +32,5 @@ export const FlowOidcUnlinkNodes: FC<FlowOidcUnlinkNodesProps> = ({ children }) 
     return children(nodes as Array<FlowUiInputNode>)
   }
 
-  return children as ReactElement<any>
+  return children as ReactElement
 }

@@ -1,5 +1,5 @@
 {
-  "include": ["packages/**/*"],
+  "include": ["project.types.d.ts", "packages/**/*"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
@@ -9,11 +9,11 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": false,
     "isolatedModules": false,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "pretty": true,
@@ -22,7 +22,7 @@
     "strict": true,
     "strictPropertyInitialization": false,
     "sourceMap": false,
-    "module": "esnext",
+    "module": "nodenext",
     "target": "es2021",
     "jsx": "react",
     "outDir": "./dist"
