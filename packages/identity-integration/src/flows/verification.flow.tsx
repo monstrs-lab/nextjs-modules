@@ -1,40 +1,51 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable default-case */
 
-import { UpdateVerificationFlowBody }                 from '@ory/client'
-import { VerificationFlow as KratosVerificationFlow } from '@ory/client'
+import type { UpdateVerificationFlowBody }                 from '@ory/client'
+import type { VerificationFlow as KratosVerificationFlow } from '@ory/client'
+import type { AxiosError }                                 from 'axios'
+import type { ReactNode }                                  from 'react'
+import type { FC }                                         from 'react'
+import type { ReactElement }                               from 'react'
 
-import React                                          from 'react'
-import { AxiosError }                                 from 'axios'
-import { ReactNode }                                  from 'react'
-import { FC }                                         from 'react'
-import { useRouter }                                  from 'next/router'
-import { useState }                                   from 'react'
-import { useEffect }                                  from 'react'
-import { useMemo }                                    from 'react'
-import { useCallback }                                from 'react'
+import { useRouter }                                       from 'next/navigation'
+import { useSearchParams }                                 from 'next/navigation'
+import { useState }                                        from 'react'
+import { useEffect }                                       from 'react'
+import { useMemo }                                         from 'react'
+import { useCallback }                                     from 'react'
+import React                                               from 'react'
 
-import { FlowProvider }                               from '../providers'
-import { ValuesProvider }                             from '../providers'
-import { ValuesStore }                                from '../providers'
-import { SubmitProvider }                             from '../providers'
-import { kratos }                                     from '../sdk'
+import { FlowProvider }                                    from '../providers'
+import { ValuesProvider }                                  from '../providers'
+import { ValuesStore }                                     from '../providers'
+import { SubmitProvider }                                  from '../providers'
+import { kratos }                                          from '../sdk'
 
 export interface VerificationFlowProps {
   children: ReactNode
   onError?: (error: { id: string }) => void
 }
 
-export const VerificationFlow: FC<VerificationFlowProps> = ({ children, onError }) => {
+export const VerificationFlow: FC<VerificationFlowProps> = ({
+  children,
+  onError,
+}): ReactElement => {
   const [flow, setFlow] = useState<KratosVerificationFlow>()
   const [submitting, setSubmitting] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(true)
   const values = useMemo(() => new ValuesStore(), [])
   const router = useRouter()
 
-  const { return_to: returnTo, flow: flowId, refresh, aal } = router.query
+  const searchparams = useSearchParams()
+
+  const returnTo = searchparams.get('return_to')
+  const flowId = searchparams.get('flow')
+  const refresh = searchparams.get('refresh')
+  const aal = searchparams.get('aal')
 
   useEffect(() => {
-    if (!router.isReady || flow) {
+    if (flow) {
       return
     }
 
@@ -47,13 +58,17 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({ children, onError 
         .catch((error: AxiosError) => {
           switch (error.response?.status) {
             case 410:
-            case 403:
-              return router.push('/auth/verification')
+            case 403: {
+              router.push('/auth/verification')
+              return
+            }
           }
 
           throw error
         })
-        .finally(() => setLoading(false))
+        .finally(() => {
+          setLoading(false)
+        })
 
       return
     }
@@ -70,14 +85,18 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({ children, onError 
       })
       .catch((error: AxiosError) => {
         switch (error.response?.status) {
-          case 400:
-            return router.push('/')
+          case 400: {
+            router.push('/')
+            return
+          }
         }
 
         throw error
       })
-      .finally(() => setLoading(false))
-  }, [flowId, router, router.isReady, aal, refresh, returnTo, flow, onError])
+      .finally(() => {
+        setLoading(false)
+      })
+  }, [flowId, router, aal, refresh, returnTo, flow, onError])
 
   useEffect(() => {
     if (flow) {
@@ -113,7 +132,9 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({ children, onError 
 
           throw error
         })
-        .finally(() => setSubmitting(false))
+        .finally(() => {
+          setSubmitting(false)
+        })
     },
     [flow, values, setSubmitting]
   )
@@ -121,6 +142,7 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({ children, onError 
   return (
     <FlowProvider value={{ flow, loading }}>
       <ValuesProvider value={values}>
+        {/* @ts-expect-error */}
         <SubmitProvider value={{ submitting, onSubmit }}>{children}</SubmitProvider>
       </ValuesProvider>
     </FlowProvider>

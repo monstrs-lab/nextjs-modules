@@ -1,6 +1,5 @@
 import { Configuration } from '@ory/client'
 import { FrontendApi }   from '@ory/client'
-
 import { getDomain }     from 'tldjs'
 
 export class KratosClient extends FrontendApi {
@@ -14,7 +13,8 @@ export class KratosClient extends FrontendApi {
         basePath = 'http://127.0.0.1:4433' // eslint-disable-line no-param-reassign
       } else if (hostname.startsWith('accounts.')) {
         basePath = origin.replace('accounts.', 'identity.') // eslint-disable-line no-param-reassign
-      } else {
+      } else if (getDomain(hostname)) {
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         basePath = `${protocol}//identity.${getDomain(hostname)}` // eslint-disable-line no-param-reassign
       }
     }

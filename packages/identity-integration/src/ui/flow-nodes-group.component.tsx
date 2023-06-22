@@ -1,16 +1,16 @@
-import type { UiNode }  from '@ory/client'
+import type { UiNode }       from '@ory/client'
+import type { ReactElement } from 'react'
+import type { FC }           from 'react'
 
-import { ReactElement } from 'react'
-import { FC }           from 'react'
-import { useMemo }      from 'react'
+import { useMemo }           from 'react'
 
-import { useFlow }      from '../providers'
+import { useFlow }           from '../providers'
 
-export type FlowNodesGroupChildren = (node: Array<UiNode>) => ReactElement<any>
+export type FlowNodesGroupChildren = (node: Array<UiNode>) => ReactElement
 
 export interface FlowNodesGroupProps {
   name: string
-  children: ReactElement<any> | FlowNodesGroupChildren
+  children: FlowNodesGroupChildren | ReactElement
 }
 
 export const FlowNodesGroup: FC<FlowNodesGroupProps> = ({ name, children }) => {
@@ -26,5 +26,5 @@ export const FlowNodesGroup: FC<FlowNodesGroupProps> = ({ name, children }) => {
     return children(nodes)
   }
 
-  return children as ReactElement<any>
+  return children
 }

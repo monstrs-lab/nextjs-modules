@@ -1,15 +1,16 @@
-import type { FlowError } from '@ory/client'
+import type { FlowError }  from '@ory/client'
+import type { AxiosError } from 'axios'
+import type { FC }         from 'react'
+import type { ReactNode }  from 'react'
 
-import React              from 'react'
-import { AxiosError }     from 'axios'
-import { FC }             from 'react'
-import { ReactNode }      from 'react'
-import { useRouter }      from 'next/router'
-import { useState }       from 'react'
-import { useEffect }      from 'react'
+import { useRouter }       from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
+import { useState }        from 'react'
+import { useEffect }       from 'react'
+import React               from 'react'
 
-import { ErrorProvider }  from '../providers'
-import { kratos }         from '../sdk'
+import { ErrorProvider }   from '../providers'
+import { kratos }          from '../sdk'
 
 export interface ErrorErrorProps {
   children: ReactNode
@@ -20,10 +21,12 @@ export const ErrorFlow: FC<ErrorErrorProps> = ({ children }) => {
   const [loading, setLoading] = useState<boolean>(true)
   const router = useRouter()
 
-  const { id } = router.query
+  const searchparams = useSearchParams()
+
+  const id = searchparams.get('id')
 
   useEffect(() => {
-    if (!router.isReady || error) {
+    if (error) {
       return
     }
 
@@ -32,19 +35,23 @@ export const ErrorFlow: FC<ErrorErrorProps> = ({ children }) => {
       .then(({ data }) => {
         setError(data)
       })
-      .catch((err: AxiosError) => {
+      .catch(async (err: AxiosError) => {
         // eslint-disable-next-line default-case
         switch (err.response?.status) {
           case 404:
           case 403:
-          case 410:
-            return router.push('/auth/login')
+          case 410: {
+            router.push('/auth/login')
+            return Promise.resolve()
+          }
         }
 
         return Promise.reject(err)
       })
-      .finally(() => setLoading(false))
-  }, [id, router, router.isReady, error])
+      .finally(() => {
+        setLoading(false)
+      })
+  }, [id, router, error])
 
   return <ErrorProvider value={{ error, loading }}>{children}</ErrorProvider>
 }

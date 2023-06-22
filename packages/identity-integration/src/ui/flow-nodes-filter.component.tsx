@@ -1,16 +1,16 @@
-import type { UiNode }  from '@ory/client'
+import type { UiNode }       from '@ory/client'
+import type { ReactElement } from 'react'
+import type { FC }           from 'react'
 
-import { ReactElement } from 'react'
-import { FC }           from 'react'
-import { useMemo }      from 'react'
+import { useMemo }           from 'react'
 
-import { useFlow }      from '../providers'
+import { useFlow }           from '../providers'
 
-export type FlowNodesFilterChildren = (node: Array<UiNode>) => ReactElement<any>
+export type FlowNodesFilterChildren = (node: Array<UiNode>) => ReactElement
 
 export interface FlowNodesFilterProps {
   predicate: (node: UiNode) => boolean
-  children: ReactElement<any> | FlowNodesFilterChildren
+  children: FlowNodesFilterChildren | ReactElement
 }
 
 export const FlowNodesFilter: FC<FlowNodesFilterProps> = ({ predicate, children }) => {
@@ -26,5 +26,5 @@ export const FlowNodesFilter: FC<FlowNodesFilterProps> = ({ predicate, children 
     return children(nodes)
   }
 
-  return children as ReactElement<any>
+  return children
 }

@@ -10,18 +10,18 @@ import type { UpdateSettingsFlowBody }     from '@ory/client'
 import type { UpdateLoginFlowBody }        from '@ory/client'
 
 export type FlowName =
+  | 'errors'
   | 'login'
-  | 'registration'
   | 'recovery'
+  | 'registration'
   | 'settings'
   | 'verification'
-  | 'errors'
 
-export type Flow = RegistrationFlow | VerificationFlow | RecoveryFlow | SettingsFlow | LoginFlow
+export type Flow = LoginFlow | RecoveryFlow | RegistrationFlow | SettingsFlow | VerificationFlow
 
 export type Body =
-  | UpdateRegistrationFlowBody
-  | UpdateVerificationFlowBody
-  | UpdateRecoveryFlowBody
-  | UpdateSettingsFlowBody
   | UpdateLoginFlowBody
+  | UpdateRecoveryFlowBody
+  | UpdateRegistrationFlowBody
+  | UpdateSettingsFlowBody
+  | UpdateVerificationFlowBody
