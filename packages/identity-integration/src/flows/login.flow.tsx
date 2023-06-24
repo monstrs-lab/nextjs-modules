@@ -34,6 +34,7 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
 
   const searchparams = useSearchParams()
 
+  const loginChallenge = searchparams.get('login_challenge')
   const returnTo = searchparams.get('return_to')
   const flowId = searchparams.get('flow')
   const refresh = searchparams.get('refresh')
@@ -64,6 +65,7 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
           refresh: Boolean(refresh),
           aal: aal ? String(aal) : undefined,
           returnTo: returnTo ? String(returnTo) : undefined,
+          loginChallenge: loginChallenge ? String(loginChallenge) : undefined,
         },
         { withCredentials: true }
       )
@@ -74,7 +76,7 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
       .finally(() => {
         setLoading(false)
       })
-  }, [flowId, router, aal, refresh, returnTo, flow, onError])
+  }, [flowId, router, aal, refresh, returnTo, loginChallenge, flow, onError])
 
   useEffect(() => {
     if (flow) {
