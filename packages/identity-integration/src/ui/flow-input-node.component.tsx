@@ -31,7 +31,7 @@ export const FlowInputNode: FC<FlowInputNodeProps> = ({ name, defaultValue, chil
     if (!value && defaultValue) {
       setValue(defaultValue)
     }
-  })
+  }, [defaultValue]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const onChange = useCallback(
     (event: ChangeEvent<HTMLInputElement> | string) => {
