@@ -105,7 +105,11 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({
   }, [values, flow])
 
   const onSubmit = useCallback(
-    (override?: Partial<UpdateVerificationFlowBody>) => {
+    (
+      override?: Partial<UpdateVerificationFlowBody>,
+      onSubmitConfirm?: () => void,
+      onSubmitError?: (error: unknown) => void
+    ) => {
       setSubmitting(true)
 
       const body = {
@@ -126,6 +130,9 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({
         .catch((error: AxiosError) => {
           switch (error.response?.status) {
             case 400:
+              if (onSubmitError) {
+                onSubmitError(error.message)
+              }
               setFlow(error.response?.data)
               return
           }
@@ -133,6 +140,9 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({
           throw error
         })
         .finally(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setSubmitting(false)
         })
     },

@@ -3,7 +3,11 @@ import type { Body }     from './flow.interfaces'
 import { createContext } from 'react'
 
 export interface ContextSubmit {
-  onSubmit: (override?: Partial<Body>) => void
+  onSubmit: (
+    override?: Partial<Body>,
+    onSubmitConfirm?: () => void,
+    onSubmitError?: (error: unknown) => void
+  ) => void
   submitting: boolean
 }
 

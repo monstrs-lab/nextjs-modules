@@ -85,7 +85,11 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({
   }, [values, flow])
 
   const onSubmit = useCallback(
-    (override?: Partial<UpdateRegistrationFlowBody>) => {
+    (
+      override?: Partial<UpdateRegistrationFlowBody>,
+      onSubmitConfirm?: () => void,
+      onSubmitError?: (error: unknown) => void
+    ) => {
       setSubmitting(true)
 
       const [submitNode] = [
@@ -122,7 +126,7 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({
             router.push('/profile/settings')
           }
         })
-        .catch(handleFlowError(router, 'registration', setFlow))
+        .catch(handleFlowError(router, 'registration', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosRegistrationFlow)
@@ -134,6 +138,9 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({
           return Promise.reject(error)
         })
         .finally(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setSubmitting(false)
         })
     },

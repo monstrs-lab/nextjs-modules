@@ -91,7 +91,11 @@ export const RecoveryFlow: FC<RecoveryFlowProps> = ({ children, onError }): Reac
   }, [values, flow])
 
   const onSubmit = useCallback(
-    (override?: Partial<UpdateRecoveryFlowBody>) => {
+    (
+      override?: Partial<UpdateRecoveryFlowBody>,
+      onSubmitConfirm?: () => void,
+      onSubmitError?: (error: unknown) => void
+    ) => {
       setSubmitting(true)
 
       const body = {
@@ -107,7 +111,7 @@ export const RecoveryFlow: FC<RecoveryFlowProps> = ({ children, onError }): Reac
         .then(({ data }) => {
           setFlow(data)
         })
-        .catch(handleFlowError(router, 'recovery', setFlow))
+        .catch(handleFlowError(router, 'recovery', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosRecoveryFlow)
@@ -119,6 +123,9 @@ export const RecoveryFlow: FC<RecoveryFlowProps> = ({ children, onError }): Reac
           return Promise.reject(error)
         })
         .finally(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setSubmitting(false)
         })
     },
