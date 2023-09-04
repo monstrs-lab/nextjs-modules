@@ -109,10 +109,16 @@ export const RecoveryFlow: FC<RecoveryFlowProps> = ({ children, onError }): Reac
           { withCredentials: true }
         )
         .then(({ data }) => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setFlow(data)
         })
         .catch(handleFlowError(router, 'recovery', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
+          if (onSubmitError) {
+            onSubmitError(error.message)
+          }
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosRecoveryFlow)
 
@@ -123,9 +129,6 @@ export const RecoveryFlow: FC<RecoveryFlowProps> = ({ children, onError }): Reac
           return Promise.reject(error)
         })
         .finally(() => {
-          if (onSubmitConfirm) {
-            onSubmitConfirm()
-          }
           setSubmitting(false)
         })
     },

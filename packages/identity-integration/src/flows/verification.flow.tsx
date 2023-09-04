@@ -125,14 +125,17 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({
           }
         )
         .then(({ data }) => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setFlow(data)
         })
         .catch((error: AxiosError) => {
+          if (onSubmitError) {
+            onSubmitError(error.message)
+          }
           switch (error.response?.status) {
             case 400:
-              if (onSubmitError) {
-                onSubmitError(error.message)
-              }
               setFlow(error.response?.data)
               return
           }
@@ -140,9 +143,6 @@ export const VerificationFlow: FC<VerificationFlowProps> = ({
           throw error
         })
         .finally(() => {
-          if (onSubmitConfirm) {
-            onSubmitConfirm()
-          }
           setSubmitting(false)
         })
     },

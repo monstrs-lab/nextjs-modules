@@ -103,6 +103,9 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
           { withCredentials: true }
         )
         .then(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           if (flow?.return_to) {
             window.location.href = flow?.return_to
           } else {
@@ -111,6 +114,9 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
         })
         .catch(handleFlowError(router, 'login', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
+          if (onSubmitError) {
+            onSubmitError(error.message)
+          }
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosLoginFlow)
 
@@ -121,9 +127,6 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
           return Promise.reject(error)
         })
         .finally(() => {
-          if (onSubmitConfirm) {
-            onSubmitConfirm()
-          }
           setSubmitting(false)
         })
     },

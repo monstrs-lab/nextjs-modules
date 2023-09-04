@@ -111,10 +111,16 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }): Reac
           { withCredentials: true }
         )
         .then(({ data }) => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setFlow(data)
         })
         .catch(handleFlowError(router, 'settings', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
+          if (onSubmitError) {
+            onSubmitError(error.message)
+          }
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosSettingsFlow)
 
@@ -125,9 +131,6 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }): Reac
           return Promise.reject(error)
         })
         .finally(() => {
-          if (onSubmitConfirm) {
-            onSubmitConfirm()
-          }
           setSubmitting(false)
         })
     },
