@@ -93,7 +93,11 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }): Reac
   }, [values, flow])
 
   const onSubmit = useCallback(
-    (override?: Partial<UpdateSettingsFlowBody>) => {
+    (
+      override?: Partial<UpdateSettingsFlowBody>,
+      onSubmitConfirm?: () => void,
+      onSubmitError?: (error: unknown) => void
+    ) => {
       setSubmitting(true)
 
       const body = {
@@ -109,7 +113,7 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }): Reac
         .then(({ data }) => {
           setFlow(data)
         })
-        .catch(handleFlowError(router, 'settings', setFlow))
+        .catch(handleFlowError(router, 'settings', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosSettingsFlow)
@@ -121,6 +125,9 @@ export const SettingsFlow: FC<SettingsFlowProps> = ({ children, onError }): Reac
           return Promise.reject(error)
         })
         .finally(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setSubmitting(false)
         })
     },

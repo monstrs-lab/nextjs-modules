@@ -85,7 +85,11 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
   }, [values, flow])
 
   const onSubmit = useCallback(
-    (override?: Partial<UpdateLoginFlowBody>) => {
+    (
+      override?: Partial<UpdateLoginFlowBody>,
+      onSubmitConfirm?: () => void,
+      onSubmitError?: (error: unknown) => void
+    ) => {
       setSubmitting(true)
 
       const body = {
@@ -105,7 +109,7 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
             router.push('/profile/settings')
           }
         })
-        .catch(handleFlowError(router, 'login', setFlow))
+        .catch(handleFlowError(router, 'login', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosLoginFlow)
@@ -117,6 +121,9 @@ export const LoginFlow: FC<LoginFlowProps> = ({ children, onError }): ReactEleme
           return Promise.reject(error)
         })
         .finally(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           setSubmitting(false)
         })
     },
