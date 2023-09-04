@@ -120,6 +120,9 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({
           { withCredentials: true }
         )
         .then(() => {
+          if (onSubmitConfirm) {
+            onSubmitConfirm()
+          }
           if (flow?.return_to) {
             window.location.href = flow?.return_to
           } else {
@@ -128,6 +131,9 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({
         })
         .catch(handleFlowError(router, 'registration', setFlow, onSubmitError))
         .catch(async (error: AxiosError) => {
+          if (onSubmitError) {
+            onSubmitError(error.message)
+          }
           if (error.response?.status === 400) {
             setFlow(error.response?.data as KratosRegistrationFlow)
 
@@ -138,9 +144,6 @@ export const RegistrationFlow: FC<RegistrationFlowProps> = ({
           return Promise.reject(error)
         })
         .finally(() => {
-          if (onSubmitConfirm) {
-            onSubmitConfirm()
-          }
           setSubmitting(false)
         })
     },
